@@ -38,6 +38,8 @@
 [![Semi-Standard](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)<!-- semistandard -->
 <!-- w3 validator -->
 
+- [HTML5 Boilerplate](https://html5boilerplate.com/)
+
 ## Author
 
 <!-- twitter -->
