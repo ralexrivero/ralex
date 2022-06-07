@@ -261,3 +261,58 @@ textarea {
   }
 }
 
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+body {
+  background-color: #f1f1f1;
+}
+
+.brand-logo {
+  color: #183153;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand-logo:hover {
+  color: #6DB5EF;
+  transition: all 0.3s ease-in-out;
+}
+
+
+   .intro {
+  min-height: 100vh;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+
+}
+
+.brand-footer {
+  background-color: #183153;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.brand-footer{
+  color: #fff;
+}
+
+.footer-link {
+  color: #fff;
+}
+
+.social-icon {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #6DB5EF;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}

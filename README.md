@@ -1,4 +1,4 @@
-# ralexrivero.github.io >> ralex.me [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2Fralexrivero.github.io)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2Fralexrivero.github.io)
+# ralex.me [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2Fralexrivero.github.io)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2Fralexrivero.github.io)
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ralexrivero/ralexrivero.github.io)
 
