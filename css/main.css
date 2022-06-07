@@ -316,3 +316,14 @@ body {
   padding: 0;
   transition: all 0.3s ease-in-out;
 }
+
+.footer-sign i {
+  --fa-animation-duration: 0s;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-sign i:hover {
+  --fa-animation-duration: .5s;
+  transition: all 0.3s ease-in-out;
+  color: #FF8787;
+}
