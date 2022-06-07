@@ -39,6 +39,10 @@
 <!-- w3 validator -->
 
 - [HTML5 Boilerplate](https://html5boilerplate.com/)
+- google analytics
+- bootstrap 5
+- font awesome
+
 
 ## Author
 
