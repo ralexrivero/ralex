@@ -31,6 +31,7 @@
 [![HTML5](https://img.shields.io/static/v1?label=&message=HTML5&color=E34F26&logo=HTML5&logoColor=E34F26&labelColor=2F333A)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)<!--HTML5-->
 [![CSS3](https://img.shields.io/static/v1?label=&message=CSS3&color=0071B5&logo=CSS3&logoColor=1572B6&labelColor=2F333A)](https://developer.mozilla.org/en-US/docs/Web/CSS)<!-- CSS3 -->
 [![JS](https://img.shields.io/static/v1?label=&message=JavaScript&color=D4B830&logo=JavaScript&logoColor=F7DF1E&labelColor=2F333A)](https://www.javascript.com)<!-- JS -->
+[![Bootstrap](https://img.shields.io/static/v1?label=&message=Bootstrap&color=7952B3&logo=Bootstrap&logoColor=7952B3&labelColor=2F333A)](https://getbootstrap.com/)<!-- Bootstrap -->
 [![Markdown](https://img.shields.io/static/v1?label=&message=Markdown&color=f4f4f4&logo=Markdown&logoColor=f2f2f2&labelColor=2F333A)](https://www.markdownguide.org/)<!-- Markdown -->
 
 [![Github Pages](https://img.shields.io/static/v1?label=&message=Github%20Pages&color=232F3E&logo=Github%20Pages&logoColor=222222&labelColor=F5F5F5)](https://pages.github.com/)<!-- Github Pages -->
@@ -40,9 +41,10 @@
 
 - [HTML5 Boilerplate](https://html5boilerplate.com/)
 - google analytics
-- bootstrap 5
+- serch console
 - font awesome
-
+- xml-sitemaps.com
+- [open graph protocol](https://ogp.me/)
 
 ## Author
 
