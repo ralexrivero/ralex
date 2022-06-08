@@ -46,6 +46,10 @@
 - xml-sitemaps.com
 - [open graph protocol](https://ogp.me/)
 
+### Future features
+
+- Accesibility: aria labels
+
 ## Author
 
 <!-- twitter -->
