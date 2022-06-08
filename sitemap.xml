@@ -9,27 +9,47 @@
 
 <url>
   <loc>https://ralex.me/</loc>
-  <lastmod>2022-06-07T19:32:40+00:00</lastmod>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://ralex.me/index.html</loc>
-  <lastmod>2022-06-07T19:32:40+00:00</lastmod>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ralex.me/about.html</loc>
-  <lastmod>2022-06-07T19:32:40+00:00</lastmod>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ralex.me/projects.html</loc>
-  <lastmod>2022-06-07T19:32:40+00:00</lastmod>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ralex.me/contact.html</loc>
-  <lastmod>2022-06-07T19:32:40+00:00</lastmod>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ralex.me/faqs.html</loc>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ralex.me/technical_inteview.html</loc>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ralex.me/privacy_policy.html</loc>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ralex.me/cookie_policy.html</loc>
+  <lastmod>2022-06-08T04:35:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
