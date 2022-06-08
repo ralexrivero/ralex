@@ -320,6 +320,7 @@ body {
 .footer-sign i {
   --fa-animation-duration: 0s;
   transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
 }
 
 .footer-sign i:hover {
