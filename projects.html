@@ -46,7 +46,7 @@
 
 <body>
   <div class="sticky-top">
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light navbar-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <i class="fa-solid fa-meteor brand-logo"></i>
@@ -154,9 +154,9 @@
         <div class="col-md-5 offset-md-1 mb-3"><!-- newsletter -->
           <form>
             <h5>Subscribe to my newsletter</h5>
-            <p>
+            <small class="no-spam">
               Never spam, only my very best content.
-            </p>
+            </small>
             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Email address</label>
               <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -177,6 +177,17 @@
       </div><!-- bottom -->
     </footer>
   </div><!-- brand-footer -->
+
+  <section class="cookies">
+    <p class="cookies_txt">I use cookies to bring a better experience</p>
+    <div class="cookies__botones">
+        <a class="cookies__boton cookies__boton--no">acept!</a>
+        <a class="cookies__boton cookies__boton--si">cancel</a>
+    </div>
+  </section><!-- cookies section-->
+  <!-- generate code here-->
+  <div id="nuevosScripts">
+  </div><!-- cookies section-->
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
