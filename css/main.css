@@ -387,6 +387,29 @@ p {
    portfolio projects
    ========================================================================== */
 
+.portfolio-image {
+    height: 120px;
+    overflow: hidden;
+
+}
+
+.portfolio-card-header {
+  font-weight: 600;
+}
+
+.badges-section {
+  margin: 1rem 0 1.5rem;
+}
+
+.badges-section img {
+  box-shadow: 1px 1px 0.4rem rgba(156, 156, 156, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.badges-section img:hover {
+  box-shadow: 0 1px 0.6rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
 /* ==========================================================================
    interview
    ========================================================================== */

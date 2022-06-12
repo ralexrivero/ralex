@@ -45,6 +45,7 @@
 - font awesome
 - xml-sitemaps.com
 - [open graph protocol](https://ogp.me/)
+- shields.io
 
 ### Future features
 
