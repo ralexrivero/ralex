@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/********************************************
+ * Header and navigation
+********************************************/
+
+.header-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo-nav {
+  width: 2.5rem;
+  margin: .5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-main ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-main-li {
+  list-style: none;
+  padding-right: .5rem;
+  padding-left: .5rem;
 }
 
-.card {
-  padding: 2em;
+.nav-main-li  a {
+  text-decoration: none;
+
 }
 
-.read-the-docs {
-  color: #888;
+.nav-main-li  a:link {
+
+}
+
+.nav-main-li  a:visited {
+
+}
+
+.nav-main-li  a:focus{
+
+}
+
+.nav-main-li  a:hover {
+
+}
+
+.nav-main-li  a:active {
+
+}
+
+/********************************************
+ * Footer and social
+********************************************/
+
+.footer-main {
+  display: flex;
+}
+
+.social-footer {
+  display: flex;
+}
+
+.social-footer li {
+  list-style: none;
+}
+
+.social-footer li a {
+  text-decoration: none;
+}
+
+.social-footer li a:link {
+}
+
+.social-footer li a:visited {
+}
+
+.social-footer li a:focus {
+
+}
+.social-footer li a:hover {
+}
+
+.social-footer li a:active {
 }
