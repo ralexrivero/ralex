@@ -38,6 +38,7 @@
 ## Tools
 
 - npm
+- vite
 - google analytics
 - search console
 - font awesome
@@ -48,6 +49,10 @@
 ### Accesibility
 
 - aria labels
+
+## Run project
+
+- `npm run dev -- --host 0.0.0.0` to run project in development mode and expose it to the network
 
 ## Author
 
