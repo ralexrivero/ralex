@@ -1,15 +1,175 @@
-/********************************************
- * Header and navigation
-********************************************/
-/************************************************
+/*********************************************
  * Navbar
- * base color: #1A237E; indigo
  * mobile first strategy
- ************************************************/
+ *********************************************/
 
-/************************************************
+ /********************************************
+*********************************************
+ * General Design Framework
+   Gray system
+  50#F7F7F7
+  100#EEEEEE
+  200#E3E3E3
+  300#D1D1D1
+  400#ACACAC
+  500#8B8B8B
+  600#646464
+  700#515151
+  800#333333 primary
+  900#131313
+ ********************************************
+********************************************/
+:root {
+  --primary-color: #333333;
+  --secondary-color: #6c757d;
+  --background-color: #F7F7F7;
+  --text-color: #333333;
+  --border-color: #ACACAC;
+
+  --color-primary-50: #F7F7F7;
+  --color-primary-100: #EEEEEE;
+  --color-primary-200: #E3E3E3;
+  --color-primary-300: #D1D1D1;
+  --color-primary-400: #ACACAC;
+  --color-primary-500: #8B8B8B;
+  --color-primary-600: #646464;
+  --color-primary-700: #515151;
+  --color-primary-800: #333333; /* primary */
+  --color-primary-900: #131313;
+
+  --font-size-xs: .8rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.3rem;
+
+  --xs: .2rem;
+  --sm: .5rem;
+  --md: 1rem;
+  --lg: 2rem;
+  --xl: 3rem;
+}
+
+/* small medium large extra large */
+.p-t-md {
+  padding-top: .5rem;
+}
+
+.p-l-md {
+  padding-left: .5rem;
+}
+
+.p-b-md {
+  padding-bottom: .5rem;
+}
+
+.p-r-md {
+  padding-right: .5rem;
+}
+
+.m-t-md {
+  margin-top: .5rem;
+}
+
+.m-b-md {
+  margin-bottom: .5rem;
+}
+
+.m-r-lg {
+  margin-right: 1rem;
+}
+
+.m-b-lg {
+  margin-bottom: 1rem;;
+}
+
+.m-r-lg {
+  margin-right: 1rem;
+}
+
+.m-l-md {
+  margin-left: var(--md);
+}
+
+.m-l-lg {
+  margin-left: var(--lg);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fs-xs {
+  font-size: var(--font-size-xs);
+}
+
+.fs-md {
+  font-size: var(--font-size-md);
+}
+
+.fs-lg {
+  font-size: var(--font-size-lg);
+}
+
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+
+.btn {
+  padding: .5rem 1rem .5rem .5rem;
+  color: var(--color-primary-700);
+  background-color: unset;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn-collapse:hover {
+  color: var(--color-primary-800);
+  background-color: var(--color-primary-200);
+  border-radius: .5rem;
+}
+
+.btn-collapse::before {
+  content: "chevron_right";
+  font-family: "Material Symbols Rounded";
+  margin-right: 5px;
+  transition: all .25s ease-in-out;
+}
+
+.btn-collapse-active::before {
+  rotate: 90deg;
+}
+
+.content-list {
+  transition: all .25s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+
+/* apply to parent ul */
+.list-reset li{
+  list-style: none;
+}
+
+/********************************************
+*********************************************
+ * Header and navigation
+ ********************************************
+********************************************/
+
+/*********************************************
+ * Navbar
+ *********************************************/
+
+/*********************************************
  * navigation block
- ************************************************/
+ *********************************************/
 
  .header-main {
   display: flex;
@@ -195,7 +355,9 @@ button {
 }
 
 /********************************************
+*********************************************
  * Footer and social
+*********************************************
 ********************************************/
 
 .footer-main {
@@ -265,9 +427,20 @@ button {
 }
 
 /********************************************
- * Theme: light and dark
+ * Main content
 ********************************************/
 
+main {
+  margin:0 auto;
+}
+
+.container {
+  margin: .5rem;
+}
+
+p {
+  margin: .5rem;
+}
 /************************************************
  * media queries
  ************************************************/

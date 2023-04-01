@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /**************************************
  * Normalize
 **************************************/
 
 html {
-  color: #333;
+  color: var(--primary-color);
 }
 
 *, *::before, *::after {
@@ -17,7 +16,7 @@ html {
 body {
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
-  background-color: #fbfbfb;
+  background-color: var(--background-color);
 }
 
 /**************************************
@@ -40,8 +39,8 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "main"
     "sidebar"
+    "main"
     "footer";
 }
 
@@ -72,6 +71,10 @@ footer {
       "header header"
       "main sidebar"
       "footer footer";
-    grid-template-columns: 80% auto;
+    grid-template-columns: 75% auto;
+    column-gap: 2rem;
+  }
+  .container {
+    padding-left: 1rem;
   }
 }
