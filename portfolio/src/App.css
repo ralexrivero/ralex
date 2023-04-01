@@ -179,7 +179,6 @@ a {
   }
 
   .logo-nav {
-    fill: red;
     display: block;
     width: 2rem;
     margin-left: .5rem;
@@ -194,10 +193,27 @@ a {
 
 .footer-main {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+  box-shadow: 0 -2px 2px #BDBDBD;
+}
+
+.logo-brand-signature {
+  width: 1.4rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .social-footer {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
 }
 
 .social-footer li {
@@ -206,19 +222,29 @@ a {
 
 .social-footer li a {
   text-decoration: none;
+  font-size: 1.4rem;
+  color: #424242;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .social-footer li a:link {
+  color: #424242;
 }
 
 .social-footer li a:visited {
+  color: #424242;
 }
 
 .social-footer li a:focus {
 
 }
 .social-footer li a:hover {
+  background-clip: content-box;
+  color: #FAFAFA;
+  background-color: #424242;
 }
+
 
 .social-footer li a:active {
 }

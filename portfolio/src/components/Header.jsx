@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-
+import logo from '../img/logo.svg';
 
 const Header = () => {
 
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="header-main">
-      <img className="logo-nav" src="../../public/logo.svg" alt="logo de Ronald Rivero" />
+      <img className="logo-nav" src={ logo } alt="logo de Ronald Rivero" />
       <span id="burger" className={`fa-bars material-symbols-rounded ${menuOpen ? 'fa-bars-clicked' : ''}`} onClick={handleBurgerClick} >menu</span>
       <h1 className="brand-name">Ronald Alexander</h1>
       <nav className="nav-header">
