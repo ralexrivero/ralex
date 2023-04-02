@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import logo from '../img/logo.svg';
+
 
 const Header = () => {
 
@@ -22,7 +22,6 @@ const Header = () => {
        */}
       <nav className="nav-header">
         <ul id="nav-header" className={`nav-header-container ${menuOpen ? 'show' : ''}`} ref={navHeaderRef} onClick={handleNavHeaderClick}>
-          <img className="logo-nav" src={ logo } alt="logo de Ronald Rivero" />
           <li><a className="nav-header-links active active-first" href="#"><span className="material-symbols-rounded">home</span>Inicio</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">person</span>Sobre mí</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">check_circle</span>Servicios</a></li>
