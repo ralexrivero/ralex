@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   return (
     <aside>
-      <div className="container">
+      <div className="container sticky-top">
         <h2 className="fs-md p-t-md p-b-md m-b-lg border-bottom">En esta página</h2>
         <nav>
           <ul className="m-l-md list-reset">
@@ -36,16 +36,17 @@ const Sidebar = () => {
                   handleButtonActive(0);
                 }}
               >
-                Tema 1
+                Acerca de mí
               </button>
               <ul
                 className={`content-list m-l-md ${
                   expandedIndexes.includes(0) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs">sub tema 1</li>
-                <li className="btn fs-xs">sub tema 2</li>
-                <li className="btn fs-xs">sub tema 3</li>
+                <li className="btn fs-xs"><a href="#about-me">Acerca de mí</a></li>
+                <li className="btn fs-xs"><a href="#tech-pasion">Mi pasión</a></li>
+                <li className="btn fs-xs"><a href="#my-goal">Propósito </a></li>
+                <li className="btn fs-xs"><a href="#skills">Experiencia y habilidades</a></li>
               </ul>
             </li>
             <li>
@@ -58,16 +59,16 @@ const Sidebar = () => {
                   handleButtonActive(1);
                 }}
               >
-                Tema 2
+                Valores
               </button>
               <ul
                 className={`content-list m-l-md ${
                   expandedIndexes.includes(1) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs">sub tema 4</li>
-                <li className="btn fs-xs">sub tema 5</li>
-                <li className="btn fs-xs">sub tema 6</li>
+                <li className="btn fs-xs"><a href="#intelectual">Honestidad intelectual</a></li>
+                <li className="btn fs-xs"><a href="#integrity">integridad</a></li>
+                <li className="btn fs-xs"><a href="#excelence">Excelencia</a></li>
               </ul>
             </li>
             <li>
@@ -80,16 +81,34 @@ const Sidebar = () => {
                   handleButtonActive(2);
                 }}
               >
-                Tema 3
+                Docencia
               </button>
               <ul
                 className={`content-list m-l-md ${
                   expandedIndexes.includes(2) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs">sub tema 7</li>
-                <li className="btn fs-xs">sub tema 8</li>
-                <li className="btn fs-xs">sub tema 9</li>
+                <li className="btn fs-xs"><a href="#teaching">Experiencia docente</a></li>
+              </ul>
+            </li>
+            <li>
+              <button
+                className={`btn btn-collapse m-t-md ${
+                  activeButtons.includes(3) ? "btn-collapse-active" : ""
+                }`}
+                onClick={() => {
+                  handleButtonClick(3);
+                  handleButtonActive(3);
+                }}
+              >
+                Servicios
+              </button>
+              <ul
+                className={`content-list m-l-md ${
+                  expandedIndexes.includes(3) ? "content-list-show" : "hide"
+                }`}
+              >
+                <li className="btn fs-xs"><a href="#services">Mis servicios</a></li>
               </ul>
             </li>
           </ul>

@@ -227,7 +227,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  z-index: 2;
+  z-index: 100;
 }
 
 .nav-header {
@@ -552,4 +552,16 @@ p {
     margin-right: .5rem;
   }
 
+}
+
+aside, main {
+  position: relative;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: var(--background-color);
 }

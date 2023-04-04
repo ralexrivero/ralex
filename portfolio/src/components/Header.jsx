@@ -15,14 +15,14 @@ const Header = () => {
   };
 
   return (
-    <header className="header-main">
+    <header className="header-main sticky-top">
       <span id="burger" className={`fa-bars material-symbols-rounded ${menuOpen ? 'fa-bars-clicked' : ''}`} onClick={handleBurgerClick} >menu</span>
       {/**
        * <h1 className="brand-name">Ronald Alexander</h1>
        */}
-      <nav className="nav-header">
+      <nav className="nav-header" aria-label="Menu de navegación principal">
         <ul id="nav-header" className={`nav-header-container ${menuOpen ? 'show' : ''}`} ref={navHeaderRef} onClick={handleNavHeaderClick}>
-          <li><a className="nav-header-links active active-first" href="#"><span className="material-symbols-rounded">home</span>Inicio</a></li>
+          <li><a className="nav-header-links active active-first" href="#" aria-current="page"><span className="material-symbols-rounded">home</span>Inicio</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">person</span>Sobre mí</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">check_circle</span>Servicios</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">work</span>Portafolio</a></li>

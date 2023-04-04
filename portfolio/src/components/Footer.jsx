@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer-main">
+    <footer aria-label="Pie de página" className="footer-main">
       <div className="copy-footer">
         <small className="brand-signature">Derechos reservados &copy; Ronald Alexander 2023</small>
       </div>
