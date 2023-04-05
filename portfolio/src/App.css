@@ -51,6 +51,26 @@
 }
 
 /* small medium large extra large */
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
 .p-t-md {
   padding-top: .5rem;
 }
@@ -482,10 +502,11 @@ button {
 
 main {
   margin:0 auto;
+  padding-top: 3rem;
 }
 
 .container {
-  /* margin: .5rem; */
+
 }
 
 p {
@@ -494,6 +515,12 @@ p {
 /************************************************
  * media queries
  ************************************************/
+
+ @media screen and (min-width: 800) {
+
+
+
+ }
 
  @media screen and (min-width:768px) {
 
@@ -574,12 +601,13 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--background-color)
+  background-color: var(--background-color);
 }
 
 .sticky-top-aside {
   position: sticky;
   top: 0;
+  padding-top: 3rem;
 }
 
 /**************************************
