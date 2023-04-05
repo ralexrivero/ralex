@@ -227,7 +227,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  z-index: 100;
 }
 
 .nav-header {
@@ -486,7 +485,7 @@ main {
 }
 
 .container {
-  margin: .5rem;
+  /* margin: .5rem; */
 }
 
 p {
@@ -525,7 +524,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .nav-header-links, .nav-header-links:link {
@@ -554,14 +553,44 @@ p {
 
 }
 
-aside, main {
+/* aside, main {
   position: relative;
 }
-
-.sticky-top {
+ */
+/* .sticky-top {
   position: sticky;
   top: 0;
-  z-index: 99;
   width: 100%;
   background-color: var(--background-color);
+} */
+
+
+/**************************************
+ * position
+**************************************/
+
+.fixed-top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color)
 }
+
+.sticky-top-aside {
+  position: sticky;
+  top: 0;
+}
+
+/**************************************
+ * z-index
+**************************************/
+
+header {
+  z-index: 2;
+}
+
+aside{
+  z-index: 1;
+}
+

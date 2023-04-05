@@ -21,8 +21,8 @@ const Sidebar = () => {
   };
 
   return (
-    <aside>
-      <div className="container sticky-top">
+    <aside className="">
+      <div className="container sticky-top-aside">
         <h2 className="fs-md p-t-md p-b-md m-b-lg border-bottom">En esta página</h2>
         <nav>
           <ul className="m-l-md list-reset">

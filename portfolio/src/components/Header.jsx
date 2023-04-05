@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header-main sticky-top">
+    <header className="header-main fixed-top-header">
       <span id="burger" className={`fa-bars material-symbols-rounded ${menuOpen ? 'fa-bars-clicked' : ''}`} onClick={handleBurgerClick} >menu</span>
       {/**
        * <h1 className="brand-name">Ronald Alexander</h1>
