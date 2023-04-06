@@ -217,7 +217,7 @@
 }
 
 .content-list-show {
-  max-height: auto;
+  max-height: fit-content;
   opacity: 1;
   transition: all .25s ease-in-out;
 }
@@ -513,15 +513,10 @@ main {
 p {
   margin: .5rem;
 }
+
 /************************************************
  * media queries
  ************************************************/
-
- @media screen and (min-width: 800) {
-
-
-
- }
 
  @media screen and (min-width:768px) {
 
@@ -580,18 +575,6 @@ p {
   }
 
 }
-
-/* aside, main {
-  position: relative;
-}
- */
-/* .sticky-top {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: var(--background-color);
-} */
-
 
 /**************************************
  * position
