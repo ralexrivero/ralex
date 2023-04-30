@@ -43,10 +43,10 @@ const Sidebar = () => {
                   expandedIndexes.includes(0) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs"><a href="#about-me">Acerca de mí</a></li>
-                <li className="btn fs-xs"><a href="#tech-pasion">Mi pasión</a></li>
-                <li className="btn fs-xs"><a href="#my-goal">Propósito </a></li>
-                <li className="btn fs-xs"><a href="#skills">Experiencia y habilidades</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#about-me">Acerca de mí</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#tech-pasion">Mi pasión</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#my-goal">Propósito </a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#skills">Experiencia y habilidades</a></li>
               </ul>
             </li>
             <li>
@@ -66,9 +66,9 @@ const Sidebar = () => {
                   expandedIndexes.includes(1) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs"><a href="#intelectual">Honestidad intelectual</a></li>
-                <li className="btn fs-xs"><a href="#integrity">integridad</a></li>
-                <li className="btn fs-xs"><a href="#excelence">Excelencia</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#intelectual">Honestidad intelectual</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#integrity">integridad</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#excelence">Excelencia</a></li>
               </ul>
             </li>
             <li>
@@ -88,7 +88,7 @@ const Sidebar = () => {
                   expandedIndexes.includes(2) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs"><a href="#teaching">Experiencia docente</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#teaching">Experiencia docente</a></li>
               </ul>
             </li>
             <li>
@@ -108,7 +108,7 @@ const Sidebar = () => {
                   expandedIndexes.includes(3) ? "content-list-show" : "hide"
                 }`}
               >
-                <li className="btn fs-xs"><a href="#services">Mis servicios</a></li>
+                <li className="btn fs-xs"><a className="link list-item" href="#services">Mis servicios</a></li>
               </ul>
             </li>
           </ul>
