@@ -49,10 +49,24 @@
 ### Accesibility
 
 - aria labels
+- semantic html
+
+### SEO
+
+- meta tags
+- sitemap.xml
+- robots.txt
+- [open graph protocol](https://ogp.me/)
+
+### GH Pages
+
+- install GH Pages `npm install gh-pages --save-dev`
 
 ## Run project
 
 - `npm run dev -- --host 0.0.0.0` to run project in development mode and expose it to the network
+- `npm run build`
+- `npm run deploy`
 
 ## Author
 
