@@ -4,4 +4,4 @@
 User-agent: *
 Disallow:
 
-sitemap: https://ralex.me/sitemap.xml
+sitemap: https://ralex.works/sitemap.xml
