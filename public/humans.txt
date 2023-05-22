@@ -3,8 +3,9 @@
 
 # TEAM
 
-    <Ronald Rivero> -- <FullStack Developer> -- <@ralexrivero>
+    <Ronald Rivero> -- <FullStack Developer> -- <@ralex_uy>
 
 # TECHNOLOGY COLOPHON
 
     React.js
+    GitHub Pages
