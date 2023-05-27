@@ -3,10 +3,6 @@
  * Normalize
 **************************************/
 
-html {
-  color: #333;
-}
-
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -16,5 +12,67 @@ html {
 body {
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--background-color);
+}
+
+.logo-header {
+  height: 4rem;
+  margin: 1rem;
+}
+
+/**************************************
+ * Default Themes
+**************************************/
+
+body {
+  background-color: #07080d;
+  color: #f8f8f8;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**************************************
+ * Header
+**************************************/
+.header-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-header {
+  width: 80%;
+}
+
+.nav-header-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-header-links {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #f8f8f8;
+}
+
+.nav-header-links span {
+  margin-right: .5rem;
 }

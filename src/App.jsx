@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Header />
       <MainContent />
-      <Sidebar />
-      <Footer />
+{/*       <Sidebar /> */}
+{/*       <Footer /> */}
     </div>
   )
 }
