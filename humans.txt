@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Ronald Rivero> -- <FullStack Developer> -- <@ralex_uy>
+
+# TECHNOLOGY COLOPHON
+
+    React.js
+    GitHub Pages
