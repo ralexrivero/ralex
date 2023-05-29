@@ -15,11 +15,6 @@ body {
   min-height: 100vh;
 }
 
-.logo-header {
-  height: 4rem;
-  margin: 1rem;
-}
-
 /**************************************
  * Default Themes
 **************************************/
@@ -46,6 +41,7 @@ a {
   padding: .5rem;
 }
 
+
 /**************************************
  * Header
 **************************************/
@@ -54,19 +50,7 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-}
-
-.nav-header {
-  width: 80%;
-}
-
-.nav-header-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .nav-header-links {
@@ -82,6 +66,39 @@ a {
   margin-right: .5rem;
 }
 
+.logo-header {
+  height: 4rem;
+  margin: 1rem;
+}
+
+/**************************************
+ * Drop down menu
+**************************************/
+
+.fa-bars, .fa-bars:link {
+  color: #f8f8f8;
+  font-size: 2.2rem;
+  padding: .3rem;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: #cbff77;
+  filter: drop-shadow(2px 2px 2px #f8f8f8)
+}
+
+.fa-bars:active {
+  color: #f8f8f8;
+  filter: drop-shadow(2px 2px 2px #cbff77)
+}
+
+.fa-bars {
+  transition: all .25s ease-in-out;
+}
+
+.fa-bars-clicked {
+  transform: rotate(-90deg);
+}
 
 /**************************************
  * Main
@@ -95,21 +112,36 @@ main {
   padding: 2rem;
 }
 
-
 .section-description {
   font-size: 1rem;
   text-align: justify;
 }
 
+.description-text {
+  margin-bottom: .5rem;
+}
+
 .description-sm {
+  font-size: .75rem;
   margin-top: 1rem;
   margin-right: 2rem;;
 }
 
+/**************************************
+ * Header
+**************************************/
+
+.nav-header {
+  display: none;
+}
 
 /**************************************
  * Magic shapes
 **************************************/
+
+.shape {
+  margin-bottom: .75rem;
+}
 
 .magic-box {
   width: 3rem;
@@ -167,6 +199,7 @@ main {
   width: 1.6rem;
   margin-right: .5rem;
   padding: .2rem;
+  transition: all .2s ease-in-out;
 }
 
 .social-footer li {
@@ -178,18 +211,19 @@ main {
 }
 
 .social-footer li a:link {
-  fill: #424242;
+  fill: #BDBDBD;
 }
 
 .social-footer li a:visited{
-  fill: #424242;
+  fill: #BDBDBD;
 }
 
 .social-footer li a:focus{
-  fill: #616161;
+  fill: #E0E0E0;
 }
 .social-footer li a:hover{
-  fill: #212121;
+  fill: #E0E0E0;
+  filter: drop-shadow(2px 2px 5px #FFF176)
 }
 
 .social-footer li a:active {
@@ -200,26 +234,43 @@ main {
 * Mobile first
 **************************************/
 
-
-
-
 @media screen and (min-width:768px) {
   /**************************************
   * grid
   **************************************/
 
-.grid-50-50 {
-  display: grid;
-  grid-template-areas:
-    "left right";
-  grid-template-columns: 50% auto;
-}
+  .grid-50-50 {
+    display: grid;
+    grid-template-areas:
+      "left right";
+    grid-template-columns: 50% auto;
+  }
 
-.area-left {
-  grid-area: left;
-}
+  .area-left {
+    grid-area: left;
+  }
 
-.area-right {
-  grid-area: right;
-}
+  .area-right {
+    grid-area: right;
+  }
+  .nav-header {
+    width: 80%;
+  }
+
+  .nav-header-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .nav-header {
+    display: block;
+  }
+
 }
