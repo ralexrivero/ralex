@@ -12,7 +12,7 @@ function App() {
       <Header />
       <MainContent />
 {/*       <Sidebar /> */}
-{/*       <Footer /> */}
+      <Footer />
     </div>
   )
 }

@@ -81,24 +81,7 @@ a {
 .nav-header-links span {
   margin-right: .5rem;
 }
-/**************************************
- * grid
-**************************************/
 
-.grid-50-50 {
-  display: grid;
-  grid-template-areas:
-    "left right";
-  grid-template-columns: 50% auto;
-}
-
-.area-left {
-  grid-area: left;
-}
-
-.area-right {
-  grid-area: right;
-}
 
 /**************************************
  * Main
@@ -139,4 +122,104 @@ main {
   height: 3rem;
   border: 1px solid #fff;
   border-radius: 50%;
+}
+
+/********************************************
+*********************************************
+ * Footer and social
+*********************************************
+********************************************/
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+  box-shadow: 0 -2px 2px #BDBDBD;
+}
+
+.copy-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo-brand-signature {
+  width: 1.4rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.social-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+.footer-social-icon {
+  width: 1.6rem;
+  margin-right: .5rem;
+  padding: .2rem;
+}
+
+.social-footer li {
+  list-style: none;
+}
+
+.social-footer li a{
+  text-decoration: none;
+}
+
+.social-footer li a:link {
+  fill: #424242;
+}
+
+.social-footer li a:visited{
+  fill: #424242;
+}
+
+.social-footer li a:focus{
+  fill: #616161;
+}
+.social-footer li a:hover{
+  fill: #212121;
+}
+
+.social-footer li a:active {
+  color: #212121;
+}
+
+/**************************************
+* Mobile first
+**************************************/
+
+
+
+
+@media screen and (min-width:768px) {
+  /**************************************
+  * grid
+  **************************************/
+
+.grid-50-50 {
+  display: grid;
+  grid-template-areas:
+    "left right";
+  grid-template-columns: 50% auto;
+}
+
+.area-left {
+  grid-area: left;
+}
+
+.area-right {
+  grid-area: right;
+}
 }
