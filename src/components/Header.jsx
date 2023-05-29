@@ -21,6 +21,15 @@ const Header = () => {
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">work</span>para que veas</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">feed</span>según yo</a></li>
           <li><a className="nav-header-links" href="#"><span className="material-symbols-rounded">contact_page</span>(con)tacto</a></li>
+          <div className="theme">
+            <i className="theme-btn bi bi-brightness-high"></i>
+            <i className="theme-btn bi bi-moon"></i>
+          </div>
+          <i className="lang-main-btn bi bi-translate"></i>
+          <div className="lang-group">
+            <button className="lang-btn lang-btn-active">en</button>
+            <button className="lang-btn">es</button>
+          </div>
         </ul>
       </nav>
     </header>
