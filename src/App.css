@@ -41,6 +41,32 @@ a {
   padding: .5rem;
 }
 
+/**************************************
+ * grid layout
+**************************************/
+
+.App {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 80% auto;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
 
 /**************************************
  * Header
@@ -157,9 +183,7 @@ main {
 }
 
 /********************************************
-*********************************************
  * Footer and social
-*********************************************
 ********************************************/
 
 .footer-main {
