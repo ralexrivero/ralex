@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 /**************************************
  * Normalize
 **************************************/
@@ -9,17 +10,14 @@
   box-sizing: border-box;
 }
 
-body {
-  line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-}
-
 /**************************************
  * Default Themes
 **************************************/
 
 body {
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
   background-color: #07080d;
   color: #f8f8f8;
 }
@@ -27,7 +25,6 @@ body {
 img {
   max-width: 100%;
 }
-
 
 ul {
   list-style: none;
@@ -42,7 +39,7 @@ a {
 }
 
 /**************************************
- * grid layout
+ * Grid Layout
 **************************************/
 
 .App {
@@ -51,7 +48,7 @@ a {
     "header"
     "main"
     "footer";
-  grid-template-rows: auto 80% auto;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
@@ -73,7 +70,6 @@ footer {
 .header-main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -89,7 +85,6 @@ footer {
 .nav-header-container {
   display: block;
   flex-wrap: nowrap;
-  width: 100%;
   justify-content: flex-start;
 }
 
@@ -97,15 +92,14 @@ footer {
   height: 242px;
 }
 
-
 .nav-header-links,
 .nav-header-links:link,
 .nav-header-links:visited {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  border: 1px solid #07080d;
   color: #f8f8f8;
   padding: .5rem;
   width: 100%;
@@ -123,7 +117,7 @@ footer {
 
 .nav-header-links:active {
   border: 1px solid #07080d;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, .75) inset;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .65) inset;
   color: #cbff77;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
 }
@@ -138,28 +132,26 @@ footer {
 }
 
 /**************************************
- * Drop down menu
+ * Drop-down Menu
 **************************************/
 
-.fa-bars, .fa-bars:link {
+.fa-bars,
+.fa-bars:link {
   color: #f8f8f8;
   font-size: 2.2rem;
   padding: .3rem;
   cursor: pointer;
+  transition: all .25s ease-in-out;
 }
 
 .fa-bars:hover {
   color: #cbff77;
-  filter: drop-shadow(2px 2px 2px #f8f8f8)
+  filter: drop-shadow(2px 2px 2px #f8f8f8);
 }
 
 .fa-bars:active {
   color: #f8f8f8;
-  filter: drop-shadow(2px 2px 2px #cbff77)
-}
-
-.fa-bars {
-  transition: all .25s ease-in-out;
+  filter: drop-shadow(2px 2px 2px #cbff77);
 }
 
 .fa-bars-clicked {
@@ -174,7 +166,6 @@ main {
 }
 
 .about-content {
-
   padding: 2rem;
 }
 
@@ -190,49 +181,45 @@ main {
 .description-sm {
   font-size: .75rem;
   margin-top: 1rem;
-  margin-right: 2rem;;
+  margin-right: 2rem;
 }
 
 /**************************************
- * Magic shapes
+ * Magic Shapes
 **************************************/
 
 .shape {
   margin-bottom: .75rem;
 }
 
-.magic-box {
+.magic-box,
+.magic-circle {
   width: 3rem;
   height: 3rem;
   border: 1px solid #fff;
 }
 
 .magic-circle {
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid #fff;
   border-radius: 50%;
 }
 
 /********************************************
- * Footer and social
+ * Footer and Social
 ********************************************/
 
 .footer-main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 1rem .5rem;
   margin-top: 1rem;
-  box-shadow: 0 -2px 2px #BDBDBD;
+  box-shadow: 0 -2px 2px #bdbdbd;
 }
 
 .copy-footer {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -246,7 +233,6 @@ main {
 .social-footer {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   align-items: baseline;
   justify-content: space-evenly;
 }
@@ -262,24 +248,19 @@ main {
   list-style: none;
 }
 
-.social-footer li a{
+.social-footer li a {
   text-decoration: none;
 }
 
-.social-footer li a:link {
-  fill: #BDBDBD;
+.social-footer li a:link,
+.social-footer li a:visited {
+  fill: #bdbdbd;
 }
 
-.social-footer li a:visited{
-  fill: #BDBDBD;
-}
-
-.social-footer li a:focus{
-  fill: #E0E0E0;
-}
-.social-footer li a:hover{
-  fill: #E0E0E0;
-  filter: drop-shadow(2px 2px 5px #FFF176)
+.social-footer li a:focus,
+.social-footer li a:hover {
+  fill: #e0e0e0;
+  filter: drop-shadow(2px 2px 5px #fff176);
 }
 
 .social-footer li a:active {
@@ -287,12 +268,12 @@ main {
 }
 
 /**************************************
-* Mobile first
+ * Mobile First
 **************************************/
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /**************************************
-  * grid
+   * Grid
   **************************************/
 
   .grid-50-50 {
@@ -309,15 +290,13 @@ main {
   .area-right {
     grid-area: right;
   }
+
   .nav-header {
     width: 80%;
   }
 
   .nav-header-container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-evenly;
   }
 
@@ -333,16 +312,11 @@ main {
   .nav-header-links,
   .nav-header-links:link,
   .nav-header-links:visited {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: #f8f8f8;
   }
 }
 
-@media screen and (min-width:880px) {
+@media screen and (min-width: 880px) {
   .nav-header-links,
   .nav-header-links:link,
   .nav-header-links:visited {
