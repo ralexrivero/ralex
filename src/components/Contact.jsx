@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form className="contact_form" onSubmit={handleSubmit}>
         <input
           id="name"
           type="text"
