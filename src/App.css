@@ -17,7 +17,6 @@
 body {
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
   background-color: #07080d;
   color: #f8f8f8;
 }
@@ -48,7 +47,7 @@ a {
     "header"
     "main"
     "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 80% auto;
   min-height: 100vh;
 }
 
@@ -89,7 +88,7 @@ footer {
 }
 
 .nav-header-open {
-  height: 242px;
+  height: 252px;
 }
 
 .nav-header-links,

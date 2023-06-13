@@ -17,18 +17,18 @@ const Header = () => {
           className="logo-header"
           src={LogoNieve}
           alt="ralex logo nieve"
-          onClick={menuOpen && toggleMenu}
+          onClick={menuOpen ? toggleMenu : undefined}
         />
       </Link>
       <span
         id="burger"
-        className={`fa-bars material-symbols-rounded ${menuOpen && 'fa-bars-clicked'}`}
+        className={`fa-bars material-symbols-rounded ${menuOpen ? 'fa-bars-clicked' : undefined}`}
         onClick={toggleMenu}
         >
         menu
       </span>
 
-      <nav className={`nav-header ${menuOpen && 'nav-header-open'}`} aria-label="Menu de navegación principal">
+      <nav className={`nav-header ${menuOpen ? 'nav-header-open' : undefined}`} aria-label="Menu de navegación principal">
         <ul className={`nav-header-container`}>
           <li>
             <Link to="/" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">home</span></Link>
