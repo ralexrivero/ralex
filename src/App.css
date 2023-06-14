@@ -277,17 +277,55 @@ main {
   flex-direction: column;
   padding: 1rem;
   margin: 1rem;
+  border: 1px solid #808185;
+  border-radius: .4rem;
 }
 
 input, textarea, button {
   padding: .5rem;
   margin-bottom: .5rem;
   border-radius: .4rem;
-  border: 1px solid red;
+  border: 1px solid #808185;
+  background-color: #07080D;
+  color: #eaebef;
 }
 
 textarea {
   height: 6rem;
+}
+
+.success-message {
+  display: block;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.success-message p {
+  text-align: left;
+}
+
+.success-message-link,
+.success-message-link:link,
+.success-message-link:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #07080d;
+  color: #f8f8f8;
+  padding: .5rem;
+}
+
+.success-message-link:focus {
+
+}
+
+.success-message-link:hover {
+
+}
+
+.success-message-link:active {
+
 }
 
 /**************************************
