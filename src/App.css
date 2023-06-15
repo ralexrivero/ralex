@@ -99,7 +99,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   border: 1px solid #07080d;
   color: #f8f8f8;
   padding: .5rem;
@@ -504,3 +504,38 @@ textarea {
 }
 
 
+/**************************************
+  * Theme
+**************************************/
+
+.switch-mode-box {
+
+}
+
+.light-mode-btn {
+
+}
+
+.nav-icon {
+
+}
+
+.dark-theme {
+  color-scheme: dark;
+}
+
+.light-theme {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: green;
+  }
+}

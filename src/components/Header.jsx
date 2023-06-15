@@ -9,7 +9,7 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   }
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const toggleLightMode = () => {
     setTheme('light');
