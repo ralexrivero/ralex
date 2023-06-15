@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import LogoNieve from '../img/logo_nieve.svg';
 import { Link } from 'react-router-dom';
+import LogoNieve from '../img/logo_nieve.svg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +11,6 @@ const Header = () => {
 
   return (
     <header className="header-main fixed-top-header">
-
       <Link to="/">
         <img
           className="logo-header"
@@ -22,30 +21,43 @@ const Header = () => {
       </Link>
       <span
         id="burger"
-        className={`fa-bars material-symbols-rounded ${menuOpen ? 'fa-bars-clicked' : undefined}`}
+        className={`fa-bars material-symbols-rounded ${menuOpen ? 'fa-bars-clicked' : ''}`}
         onClick={toggleMenu}
-        >
+      >
         menu
       </span>
 
-      <nav className={`nav-header ${menuOpen ? 'nav-header-open' : undefined}`} aria-label="Menu de navegación principal">
-        <ul className={`nav-header-container`}>
+      <nav className={`nav-header ${menuOpen ? 'nav-header-open' : ''}`} aria-label="Menu de navegación principal">
+        <ul className="nav-header-container">
           <li>
-            <Link to="/" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">home</span></Link>
+            <Link to="/" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">home</span>
+            </Link>
           </li>
           <li>
-            <Link to="/soy" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">person</span>Soy</Link>
+            <Link to="/soy" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">person</span>Soy
+            </Link>
           </li>
           <li>
-            <Link to="/self-analysis" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">check_circle</span>auto análisis</Link>
+            <Link to="/self-analysis" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">check_circle</span>auto análisis
+            </Link>
           </li>
           <li>
-            <Link to="/so-you-can-see" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">work</span>para que veas</Link></li>
-          <li>
-            <Link to="/according-to-me" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">feed</span>según yo</Link>
+            <Link to="/so-you-can-see" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">work</span>para que veas
+            </Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">contact_page</span>(con)tacto</Link>
+            <Link to="/according-to-me" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">feed</span>según yo
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">contact_page</span>(con)tacto
+            </Link>
           </li>
           <li>
             <div className="switch-mode-box">
@@ -69,7 +81,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
 export default Header;
