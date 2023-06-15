@@ -18,7 +18,7 @@ const Contact = () => {
     <section className="section-contact">
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="contact-form-info">
-          <p>Si tienes alguna consulta o deseas hablar sobre un proyecto, envíame un correo electrónico o llena el formulario ✉️. Estoy aquí para ayudarte con gusto.</p>
+          <p>Si tienes alguna consulta o deseas hablar sobre un proyecto, envíame un <a className="link-email" href="mailto:ralexrivero@gmail.com" target="_blank">correo electrónico ✉️</a> o llena el formulario. Estoy aquí para ayudarte con gusto.</p>
           <p>Email<a className="link-email-text" href="mailto:ralexrivero@gmail.com" target="_blank">ralexrivero@gmail.com</a></p>
         </div>
         <input

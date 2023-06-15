@@ -47,6 +47,25 @@ const Header = () => {
           <li>
             <Link to="/contact" className="nav-header-links" onClick={toggleMenu}><span className="material-symbols-rounded">contact_page</span>(con)tacto</Link>
           </li>
+          <li>
+            <div className="switch-mode-box">
+              <button className="light-mode-btn">
+                <span className="nav-icon material-symbols-rounded">light_mode</span>
+              </button>
+              <button className="dark-mode-btn">
+                <span className="nav-icon material-symbols-rounded">dark_mode</span>
+              </button>
+            </div>
+          </li>
+          <li>
+            <div className="lang">
+              <i className="lang-main-btn bi bi-translate"></i>
+              <div className="lang-group">
+                <button className="lang-btn lang-btn-active" onClick={() => i18n.changeLanguage("en")}>en</button>
+                <button className="lang-btn" onClick={() => i18n.changeLanguage("es")}>es</button>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -54,14 +73,3 @@ const Header = () => {
 }
 
 export default Header;
-
-
-{/*           <div className="theme">
-            <i className="theme-btn bi bi-brightness-high"></i>
-            <i className="theme-btn bi bi-moon"></i>
-          </div>
-          <i className="lang-main-btn bi bi-translate"></i>
-          <div className="lang-group">
-            <button className="lang-btn lang-btn-active">en</button>
-            <button className="lang-btn">es</button>
-          </div> */}
