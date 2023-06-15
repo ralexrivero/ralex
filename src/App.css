@@ -101,7 +101,7 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid #07080d;
+  /* border: 1px solid #07080d; */
   color: #f8f8f8;
   padding: .5rem;
   width: 100%;
@@ -109,7 +109,7 @@ footer {
 }
 
 .nav-header-links:focus {
-  border: 1px dotted #f8f8f8;
+  /* border: 1px dotted #f8f8f8; */
 }
 
 .nav-header-links:hover {
@@ -118,7 +118,7 @@ footer {
 }
 
 .nav-header-links:active {
-  border: 1px solid #07080d;
+  /* border: 1px solid #07080d; */
   color: #cbff77;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
 }
@@ -200,6 +200,11 @@ main {
   border: 1px solid #fff;
 }
 
+.light-theme .magic-box,
+.light-thme .magic-circle {
+  border-color: #07080D;
+}
+
 .magic-circle {
   border-radius: 50%;
 }
@@ -268,6 +273,12 @@ main {
   color: #212121;
 }
 
+.light-theme .social-footer li a,
+.light-theme .social-footer li a:link,
+.light-theme .social-footer li a:visited {
+  fill: #212121;
+}
+
 /**************************************
  * Contact form
 **************************************/
@@ -323,14 +334,13 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #07080d;
   color: #f8f8f8;
   padding: .5rem;
 }
 
-.success-message-link:focus {
+/* .success-message-link:focus {
   border: 1px dotted #f8f8f8;
-}
+} */
 
 .success-message-link:hover {
   color: #f8f8f8;
@@ -338,8 +348,8 @@ textarea {
 }
 
 .success-message-link:active {
-  border: 1px solid #07080d;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, .65) inset;
+  /* border: 1px solid #07080d; */
+  /* box-shadow: 2px 2px 8px rgba(0, 0, 0, .65) inset; */
   color: #cbff77;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
 }
@@ -498,7 +508,7 @@ textarea {
 
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 952px) {
   .nav-header-links,
   .nav-header-links:link,
   .nav-header-links:visited {
@@ -506,21 +516,31 @@ textarea {
   }
 }
 
-
 /**************************************
   * Theme
 **************************************/
 
 .switch-mode-box {
-
+  display: flex;
+  padding: .5rem;
 }
 
+.dark-mode-btn,
 .light-mode-btn {
-
+  cursor: pointer;
+  color: #f8f8f8;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: .5rem;
+  transition: all .3s ease-in-out;
 }
 
 .nav-icon {
-
+  font-size: .9rem;
+  transition: all .3s ease-in-out;
 }
 
 .dark-theme {
@@ -529,16 +549,93 @@ textarea {
 
 .light-theme {
   color-scheme: light;
+  background-color: #f8f8f8;
+  color: #07080d;
 }
+
+.light-theme .nav-header-links,
+.light-theme .nav-header-links:link,
+.light-theme .nav-header-links:visited {
+  color: #07080D;
+}
+
+.light-theme .fa-bars,
+.light-theme .fa-bars:link {
+  color: #07080D;
+}
+
+.dark-mode-btn:hover,
+.dark-theme .active {
+  box-shadow: 1px 1px 4px rgba(255, 255, 255, .3) ,
+              -1px -1px 4px rgba(255, 255, 255, .7) inset;
+  background-color: #000;
+}
+
+.dark-mode-btn:hover .nav-icon,
+.dark-theme .active .nav-icon {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+}
+
+.light-mode-btn:hover,
+.light-theme .active {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .3),
+              -1px -1px 4px rgba(0, 0, 0, .3) inset;
+}
+
+.light-mode-btn:hover .nav-icon,
+.light-theme .active .nav-icon {
+  color: #07080d;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
+}
+
+/**************************************
+  * Theme - Contact
+**************************************/
+
+.light-theme textarea,
+.light-theme input {
+  background-color: #f8f8f8;
+  color: #07080d;
+}
+
+.light-theme .btn-contact-submit {
+  color: #f8f8f8;
+  background-color: #07080d;
+}
+
+.light-theme .btn-contact-submit:hover {
+  color: #07080d;
+  background-color: #f8f8f8;
+}
+
+.light-theme .contact-form-info p:first-child a,
+.light-theme .contact-form-info p:first-child a:link,
+.light-theme .contact-form-info p:first-child a:visited,
+.light-theme .link-email-text,
+.light-theme .link-email-text:link,
+.light-theme .link-email-text:visited {
+  color: #07080d;
+}
+
+.light-theme .success-message-link,
+.light-theme .success-message-link:link,
+.light-theme .success-message-link:visited {
+  color: #07080d;
+}
+
+/**************************************
+  * Color Schema
+**************************************/
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: red;
+
   }
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    background-color: green;
+
   }
 }

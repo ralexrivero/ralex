@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LogoNieve from '../img/logo_nieve.svg';
+import LogoNegro from '../img/logo_negro.svg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = () => {
       <Link to="/">
         <img
           className="logo-header"
-          src={LogoNieve}
+          src={theme === 'dark' ? LogoNieve : LogoNegro}
           alt="ralex logo nieve"
           onClick={menuOpen ? toggleMenu : undefined}
         />
