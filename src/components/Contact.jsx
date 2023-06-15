@@ -6,17 +6,21 @@ const Contact = () => {
   if (state.succeeded) {
       return (
         <div className="success-message">
-        <p>¡Genial! 🎉 ¡Tu mensaje fue enviado! 💌</p>
-        <p>¡Mil gracias por tomarte el tiempo de escribirme! 🙌 Valoro tus palabras y te prometo que te voy a contestar a la brevedad. Mientras tanto, dale una mirada a la página y conóceme un poco más. 🌟</p>
-        <p>¡Espero que el sitio te guste y te parezca buena onda! 💫✨</p>
-        <Link to="/" className="success-message-link"><span className="material-symbols-rounded">home</span></Link>
+          <p>¡Genial! 🎉 ¡Tu mensaje fue enviado! 💌</p>
+          <p>¡Mil gracias por tomarte el tiempo de escribirme! 🙌 Valoro tus palabras y te prometo que te voy a contestar a la brevedad. Mientras tanto, da una vuelta por el sitio y conóceme un poco más. 🌟</p>
+          <p>¡Espero que tengas una buena experiencia! 💫✨</p>
+          <Link to="/" className="success-message-link"><span className="material-symbols-rounded">home</span></Link>
       </div>
       );
   }
 
   return (
-    <section>
-      <form className="contact_form" onSubmit={handleSubmit}>
+    <section className="section-contact">
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-form-info">
+          <p>Si tienes alguna consulta o deseas hablar sobre un proyecto, envíame un correo electrónico o llena el formulario ✉️. Estoy aquí para ayudarte con gusto.</p>
+          <p>Email<a className="link-email-text" href="mailto:ralexrivero@gmail.com" target="_blank">ralexrivero@gmail.com</a></p>
+        </div>
         <input
           id="name"
           type="text"
@@ -53,6 +57,7 @@ const Contact = () => {
           errors={state.errors}
         />
         <button
+          className="btn-contact-submit"
           type="submit"
           disabled={state.submitting}
         >
