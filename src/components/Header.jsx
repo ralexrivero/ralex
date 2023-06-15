@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LogoNieve from '../img/logo_nieve.svg';
 
@@ -8,6 +8,22 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   }
+
+  const [theme, setTheme] = useState('light');
+
+  const toggleLightMode = () => {
+    setTheme('light');
+  }
+
+  const toggleDarkMode = () => {
+    setTheme('dark');
+  }
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.classList.toggle('dark-theme', theme === 'dark');
+    body.classList.toggle('light-theme', theme === 'light');
+  }, [theme]);
 
   return (
     <header className="header-main fixed-top-header">
@@ -61,15 +77,15 @@ const Header = () => {
           </li>
           <li>
             <div className="switch-mode-box">
-              <button className="light-mode-btn">
+              <button className={`light-mode-btn ${theme === 'light' ? 'active' : ''}`} onClick={toggleLightMode}>
                 <span className="nav-icon material-symbols-rounded">light_mode</span>
               </button>
-              <button className="dark-mode-btn">
+              <button className={`dark-mode-btn ${theme === 'dark' ? 'active' : ''}`} onClick={toggleDarkMode}>
                 <span className="nav-icon material-symbols-rounded">dark_mode</span>
               </button>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className="lang">
               <i className="lang-main-btn bi bi-translate"></i>
               <div className="lang-group">
@@ -77,7 +93,7 @@ const Header = () => {
                 <button className="lang-btn" onClick={() => i18n.changeLanguage("es")}>es</button>
               </div>
             </div>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
