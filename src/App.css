@@ -4,7 +4,9 @@
  * Normalize
 **************************************/
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -33,7 +35,6 @@ ul {
 a {
   text-decoration: none;
 }
-
 
 .p-sm {
   padding: .5rem;
@@ -289,7 +290,9 @@ main {
   border-radius: .4rem;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   padding: .5rem;
   margin-bottom: .5rem;
   border-radius: .5rem;
@@ -476,8 +479,8 @@ textarea {
     display: inline;
     cursor: pointer;
     color: #f8f8f8;
-    font-size: .8rem;
-    padding: .2rem;
+    font-size: .7rem;
+    transition: all .3s ease-in-out;
   }
 
   .link-email-text:hover {
