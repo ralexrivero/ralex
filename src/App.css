@@ -458,14 +458,20 @@ textarea {
 }
 
 /**************************************
-  * Themes
+  * Themes & Language
 **************************************/
 
+.lang-main-btn {
+  padding-left: .5rem;
+}
+
+.lang-group,
 .switch-mode-box {
   display: flex;
   padding: .5rem;
 }
 
+.lang-btn,
 .dark-mode-btn,
 .light-mode-btn {
   cursor: pointer;
@@ -500,6 +506,8 @@ textarea {
   transition: all .3s ease-in-out;
 }
 
+
+
 .dark-theme {
   color-scheme: dark;
 }
@@ -523,11 +531,13 @@ textarea {
 .dark-theme .active .nav-icon {
 }
 
+.lang-btn:hover,
 .light-mode-btn:hover,
 .light-theme .active {
   background-color: #fff;
 }
 
+.lang-btn:hover,
 .light-mode-btn:hover .nav-icon,
 .light-theme .active .nav-icon {
   color: #07080d;

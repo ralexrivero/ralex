@@ -9,16 +9,20 @@ import './index.css'
 
 import global_es from './traslations/es/global.json';
 import global_en from './traslations/en/global.json';
+import main_es from './traslations/es/main.json';
+import main_en from './traslations/en/main.json';
 
 i18next.init({
   interpolation: { escapeValue: false},
   lng: "es",
   resources: {
     es: {
-      global: global_es
+      global: global_es,
+      main: main_es,
     },
     en: {
-      global: global_en
+      global: global_en,
+      main: main_en,
     }
   }
 });
