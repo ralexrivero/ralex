@@ -1,31 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import LogoNieve from '../img/logo_nieve.svg';
 import LogoNegro from '../img/logo_negro.svg';
 
+import Themes from './Themes';
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   }
 
   const [theme, setTheme] = useState('dark');
-
-  const toggleLightMode = () => {
-    setTheme('light');
-  }
-
-  const toggleDarkMode = () => {
-    setTheme('dark');
-  }
-
-  useEffect(() => {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-theme', theme === 'dark');
-    body.classList.toggle('light-theme', theme === 'light');
-  }, [theme]);
 
   const [t, i18n] = useTranslation("global");
 
@@ -51,43 +38,36 @@ const Header = () => {
         <ul className="nav-header-container">
           <li>
             <Link to="/" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">home</span>Inicio
+              <span className="material-symbols-rounded">home</span>{t("mainHeader.menu.home")}
             </Link>
           </li>
           <li>
-            <Link to="/soy" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">person</span>Soy
+            <Link to="/me" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-rounded">person</span>{t("mainHeader.menu.i")}
             </Link>
           </li>
           <li>
             <Link to="/self-analysis" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">check_circle</span>auto análisis
+              <span className="material-symbols-rounded">check_circle</span>{t("mainHeader.menu.selfAnalysis")}
             </Link>
           </li>
           <li>
             <Link to="/so-you-can-see" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">work</span>para que veas
+              <span className="material-symbols-rounded">work</span>{t("mainHeader.menu.soYouCanSee")}
             </Link>
           </li>
           <li>
             <Link to="/according-to-me" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">feed</span>según yo
+              <span className="material-symbols-rounded">feed</span>{t("mainHeader.menu.accordingToMe")}
             </Link>
           </li>
           <li>
             <Link to="/contact" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">contact_page</span>(con)tacto
+              <span className="material-symbols-rounded">contact_page</span>{t("mainHeader.menu.contact")}
             </Link>
           </li>
           <li>
-            <div className="switch-mode-box">
-              <button className={`light-mode-btn ${theme === 'light' ? 'active' : ''}`} onClick={() => {toggleLightMode(); toggleMenu();}}>
-                <span className="nav-icon material-symbols-rounded material-symbols-outlined">light_mode</span>
-              </button>
-              <button className={`dark-mode-btn ${theme === 'dark' ? 'active' : ''}`} onClick={() => {toggleDarkMode(); toggleMenu();}}>
-                <span className="nav-icon material-symbols-rounded material-symbols-outlined">dark_mode</span>
-              </button>
-            </div>
+              <Themes theme={theme} setTheme={setTheme} toggleMenu={toggleMenu}/>
           </li>
           <li>
             <div className="lang">

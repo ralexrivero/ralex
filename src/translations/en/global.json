@@ -1,0 +1,21 @@
+{
+  "mainHeader": {
+    "menu": {
+      "home": "Home",
+      "i": "Me",
+      "selfAnalysis": "Self Analysis",
+      "soYouCanSee": "So you can see",
+      "accordingToMe": "According to Me",
+      "contact": "Contact"
+    },
+    "theme": {
+      "lightTitle": "Switch to Light Mode",
+      "lightAria": "Light Mode button",
+      "darkTitle": "Switch to Dark Mode",
+      "darkAria": "Dark Mode button"
+    }
+  },
+  "mainFooter": {
+    "sign": "All Rights Reserved &copy; Ronald Alexander 2023"
+  }
+}

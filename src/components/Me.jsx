@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 
-const I = () => {
+const Me = () => {
   const [t, i18n] = useTranslation("global");
   return (
     <div></div>
   )
 }
 
-export default I;
+export default Me;

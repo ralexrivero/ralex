@@ -1,0 +1,15 @@
+{
+  "mainHeader": {
+    "menu": {
+      "home": "Inicio",
+      "i": "Soy",
+      "selfAnalysis": "Auto análisis",
+      "soYouCanSee": "Para que veas",
+      "accordingToMe": "Según yo",
+      "contact": "(con)tacto"
+    }
+  },
+  "mainFooter": {
+    "sign": "Derechos reservados &copy; Ronald Alexander 2023"
+  }
+}

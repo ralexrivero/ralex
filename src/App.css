@@ -105,6 +105,7 @@ footer {
   padding: .5rem;
   width: 100%;
   transition: all .3s ease-in-out;
+  text-align: center;
 }
 
 .light-theme .nav-header-links,
@@ -627,10 +628,11 @@ textarea {
 
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 1024px) {
   .nav-header-links,
   .nav-header-links:link,
   .nav-header-links:visited {
     flex-direction: row;
+    justify-content: center;
   }
 }
