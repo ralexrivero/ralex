@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 const I = () => {
+  const [t, i18n] = useTranslation("global");
   return (
-    <h1>About me page</h1>
+    <h1>{t("header.hello-world")}</h1>
   )
 }
 

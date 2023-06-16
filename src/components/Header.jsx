@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import LogoNieve from '../img/logo_nieve.svg';
 import LogoNegro from '../img/logo_negro.svg';
@@ -26,6 +27,8 @@ const Header = () => {
     body.classList.toggle('light-theme', theme === 'light');
   }, [theme]);
 
+  const [t, i18n] = useTranslation("global");
+
   return (
     <header className="header-main fixed-top-header">
       <Link to="/">
@@ -48,7 +51,7 @@ const Header = () => {
         <ul className="nav-header-container">
           <li>
             <Link to="/" className="nav-header-links" onClick={toggleMenu}>
-              <span className="material-symbols-rounded">home</span>
+              <span className="material-symbols-rounded">home</span>Inicio
             </Link>
           </li>
           <li>
@@ -78,23 +81,23 @@ const Header = () => {
           </li>
           <li>
             <div className="switch-mode-box">
-              <button className={`light-mode-btn ${theme === 'light' ? 'active' : ''}`} onClick={toggleLightMode}>
-                <span className="nav-icon material-symbols-rounded">light_mode</span>
+              <button className={`light-mode-btn ${theme === 'light' ? 'active' : ''}`} onClick={() => {toggleLightMode(); toggleMenu();}}>
+                <span className="nav-icon material-symbols-rounded material-symbols-outlined">light_mode</span>
               </button>
-              <button className={`dark-mode-btn ${theme === 'dark' ? 'active' : ''}`} onClick={toggleDarkMode}>
-                <span className="nav-icon material-symbols-rounded">dark_mode</span>
+              <button className={`dark-mode-btn ${theme === 'dark' ? 'active' : ''}`} onClick={() => {toggleDarkMode(); toggleMenu();}}>
+                <span className="nav-icon material-symbols-rounded material-symbols-outlined">dark_mode</span>
               </button>
             </div>
           </li>
-          {/* <li>
+          <li>
             <div className="lang">
               <i className="lang-main-btn bi bi-translate"></i>
               <div className="lang-group">
-                <button className="lang-btn lang-btn-active" onClick={() => i18n.changeLanguage("en")}>en</button>
-                <button className="lang-btn" onClick={() => i18n.changeLanguage("es")}>es</button>
+                <button className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`} onClick={() => {i18n.changeLanguage("en"); toggleMenu();}}>en</button>
+                <button className={`lang-btn ${i18n.language === 'es' ? 'active' : ''}`} onClick={() => {i18n.changeLanguage("es"); toggleMenu();}}>es</button>
               </div>
             </div>
-          </li> */}
+          </li>
         </ul>
       </nav>
     </header>

@@ -101,11 +101,16 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px solid #07080d; */
   color: #f8f8f8;
   padding: .5rem;
   width: 100%;
   transition: all .3s ease-in-out;
+}
+
+.light-theme .nav-header-links,
+.light-theme .nav-header-links:link,
+.light-theme .nav-header-links:visited {
+  color: #07080D;
 }
 
 .nav-header-links:focus {
@@ -117,8 +122,12 @@ footer {
   color: #07080d;
 }
 
+.light-theme .nav-header-links:hover {
+  background-color: #999;
+  color: #f8f8f8;
+}
+
 .nav-header-links:active {
-  /* border: 1px solid #07080d; */
   color: #cbff77;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
 }
@@ -142,7 +151,7 @@ footer {
   font-size: 2.2rem;
   padding: .3rem;
   cursor: pointer;
-  transition: all .25s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .fa-bars:hover {
@@ -201,7 +210,7 @@ main {
 }
 
 .light-theme .magic-box,
-.light-thme .magic-circle {
+.light-theme .magic-circle {
   border-color: #07080D;
 }
 
@@ -247,7 +256,7 @@ main {
   width: 1.6rem;
   margin-right: .5rem;
   padding: .2rem;
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .social-footer li {
@@ -358,7 +367,7 @@ textarea {
   cursor: pointer;
   background-color: #f8f8f8;
   color: #07080d;
-  transition: all .25s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .btn-contact-submit:focus {
@@ -417,14 +426,120 @@ textarea {
   display: none;
 }
 
+.light-theme textarea,
+.light-theme input {
+  background-color: #f8f8f8;
+  color: #07080d;
+}
+
+.light-theme .btn-contact-submit {
+  color: #f8f8f8;
+  background-color: #07080d;
+}
+
+.light-theme .btn-contact-submit:hover {
+  color: #07080d;
+  background-color: #f8f8f8;
+}
+
+.light-theme .contact-form-info p:first-child a,
+.light-theme .contact-form-info p:first-child a:link,
+.light-theme .contact-form-info p:first-child a:visited,
+.light-theme .link-email-text,
+.light-theme .link-email-text:link,
+.light-theme .link-email-text:visited {
+  color: #07080d;
+}
+
+.light-theme .success-message-link,
+.light-theme .success-message-link:link,
+.light-theme .success-message-link:visited {
+  color: #07080d;
+}
+
 /**************************************
- * Mobile First
+  * Themes
+**************************************/
+
+.switch-mode-box {
+  display: flex;
+  padding: .5rem;
+}
+
+.dark-mode-btn,
+.light-mode-btn {
+  cursor: pointer;
+  color: #f8f8f8;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: .5rem;
+  transition: all .3s ease-in-out;
+}
+
+.nav-icon {
+  font-size: .9rem;
+  transition: all .3s ease-in-out;
+}
+
+.material-symbols-outlined,
+.material-symbols-rounded {
+  transition: all .3s ease-in-out;
+}
+
+.dark-mode-btn:hover,
+.light-mode-btn:hover,
+.material-symbols-outlined:hover{
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  transition: all .3s ease-in-out;
+}
+
+.dark-theme {
+  color-scheme: dark;
+}
+
+.light-theme {
+  color-scheme: light;
+  background-color: #f8f8f8;
+  color: #07080d;
+}
+
+.light-theme .fa-bars,
+.light-theme .fa-bars:link {
+  color: #07080D;
+}
+
+.dark-mode-btn:hover,
+.dark-theme .active {
+}
+
+.dark-mode-btn:hover .nav-icon,
+.dark-theme .active .nav-icon {
+}
+
+.light-mode-btn:hover,
+.light-theme .active {
+  background-color: #fff;
+}
+
+.light-mode-btn:hover .nav-icon,
+.light-theme .active .nav-icon {
+  color: #07080d;
+}
+
+/**************************************
+ * Media queries
 **************************************/
 
 @media screen and (min-width: 768px) {
-  /**************************************
-   * Grid
-  **************************************/
+
+  /* Grid */
 
   .grid-50-50 {
     display: grid;
@@ -447,7 +562,8 @@ textarea {
 
   .nav-header-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: stretch;
+    align-items: flex-start;
   }
 
   .fa-bars {
@@ -455,14 +571,16 @@ textarea {
   }
 
   .nav-header {
-    display: block;
+    display: flex;
     height: auto;
+    justify-content: flex-end;
   }
 
   .nav-header-links,
   .nav-header-links:link,
   .nav-header-links:visited {
     flex-direction: column;
+    font-size: .9rem;
   }
 
   .contact-form {
@@ -508,134 +626,10 @@ textarea {
 
 }
 
-@media screen and (min-width: 952px) {
+@media screen and (min-width: 996px) {
   .nav-header-links,
   .nav-header-links:link,
   .nav-header-links:visited {
     flex-direction: row;
-  }
-}
-
-/**************************************
-  * Theme
-**************************************/
-
-.switch-mode-box {
-  display: flex;
-  padding: .5rem;
-}
-
-.dark-mode-btn,
-.light-mode-btn {
-  cursor: pointer;
-  color: #f8f8f8;
-  width: 1.6rem;
-  height: 1.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: .5rem;
-  transition: all .3s ease-in-out;
-}
-
-.nav-icon {
-  font-size: .9rem;
-  transition: all .3s ease-in-out;
-}
-
-.dark-theme {
-  color-scheme: dark;
-}
-
-.light-theme {
-  color-scheme: light;
-  background-color: #f8f8f8;
-  color: #07080d;
-}
-
-.light-theme .nav-header-links,
-.light-theme .nav-header-links:link,
-.light-theme .nav-header-links:visited {
-  color: #07080D;
-}
-
-.light-theme .fa-bars,
-.light-theme .fa-bars:link {
-  color: #07080D;
-}
-
-.dark-mode-btn:hover,
-.dark-theme .active {
-  box-shadow: 1px 1px 4px rgba(255, 255, 255, .3) ,
-              -1px -1px 4px rgba(255, 255, 255, .7) inset;
-  background-color: #000;
-}
-
-.dark-mode-btn:hover .nav-icon,
-.dark-theme .active .nav-icon {
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
-}
-
-.light-mode-btn:hover,
-.light-theme .active {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, .3),
-              -1px -1px 4px rgba(0, 0, 0, .3) inset;
-}
-
-.light-mode-btn:hover .nav-icon,
-.light-theme .active .nav-icon {
-  color: #07080d;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
-}
-
-/**************************************
-  * Theme - Contact
-**************************************/
-
-.light-theme textarea,
-.light-theme input {
-  background-color: #f8f8f8;
-  color: #07080d;
-}
-
-.light-theme .btn-contact-submit {
-  color: #f8f8f8;
-  background-color: #07080d;
-}
-
-.light-theme .btn-contact-submit:hover {
-  color: #07080d;
-  background-color: #f8f8f8;
-}
-
-.light-theme .contact-form-info p:first-child a,
-.light-theme .contact-form-info p:first-child a:link,
-.light-theme .contact-form-info p:first-child a:visited,
-.light-theme .link-email-text,
-.light-theme .link-email-text:link,
-.light-theme .link-email-text:visited {
-  color: #07080d;
-}
-
-.light-theme .success-message-link,
-.light-theme .success-message-link:link,
-.light-theme .success-message-link:visited {
-  color: #07080d;
-}
-
-/**************************************
-  * Color Schema
-**************************************/
-
-@media (prefers-color-scheme: dark) {
-  body {
-
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-
   }
 }
