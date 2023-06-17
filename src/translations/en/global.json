@@ -1,5 +1,10 @@
 {
   "mainHeader": {
+    "logoTitle": "Ralex's logo",
+    "logoAlt": "Ralex's logo",
+    "burguerTitle": "Toggle Menu",
+    "burguerAria": "Toggle Menu",
+    "navigationAria": "Main Navigation Menu",
     "menu": {
       "home": "Home",
       "i": "Me",
@@ -7,6 +12,14 @@
       "soYouCanSee": "So you can see",
       "accordingToMe": "According to Me",
       "contact": "Contact"
+    },
+    "lang": {
+      "iconTitle": "Toggle language menu",
+      "iconAria": "Toggle language menu",
+      "enTitle": "English",
+      "enAria": "Switch to English",
+      "esTitle": "Spanish",
+      "esAria": "Switch to Spanish"
     },
     "theme": {
       "lightTitle": "Switch to Light Mode",
@@ -16,6 +29,19 @@
     }
   },
   "mainFooter": {
-    "sign": "All Rights Reserved &copy; Ronald Alexander 2023"
+    "footer": "Page footer",
+    "social": {
+      "LinkedInTitle": "LinkedIn profile",
+      "LinkedInAria": "LinkedIn profile",
+      "GitHubTitle": "GitHub profile",
+      "GitHubAria": "GitHub profile",
+      "TwitterTitle": "Twitter profile",
+      "TwitterAria": "Twitter profile",
+      "MediumTitle": "Medium profile",
+      "MediumAria": "Medium profile",
+      "cardTitle": "Professional Business Card",
+      "cardAria": "Professional Business Card"
+    },
+    "sign": "All Rights Reserved © Ronald Alexander 2023"
   }
 }

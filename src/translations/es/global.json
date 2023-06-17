@@ -1,15 +1,47 @@
 {
   "mainHeader": {
+    "logoTitle": "Logo Ralex",
+    "logoAlt": "Logo Ralex",
+    "burguerTitle": "Alternar Menú",
+    "burguerAria": "Alternar Menú",
+    "navigationAria": "Menú de Navegación Principal",
     "menu": {
       "home": "Inicio",
-      "i": "Soy",
-      "selfAnalysis": "Auto análisis",
-      "soYouCanSee": "Para que veas",
+      "i": "Yo",
+      "selfAnalysis": "Autoanálisis",
+      "soYouCanSee": "Para que puedas ver",
       "accordingToMe": "Según yo",
-      "contact": "(con)tacto"
+      "contact": "Contacto"
+    },
+    "lang": {
+      "iconTitle": "Menu de cambio de idioma",
+      "iconAria": "Menu de cambio de idioma",
+      "enTitle": "Inglés",
+      "enAria": "Cambiar a Inglés",
+      "esTitle": "Español",
+      "esAria": "Cambiar a Español"
+    },
+    "theme": {
+      "lightTitle": "Cambiar a Modo Claro",
+      "lightAria": "Botón Modo Claro",
+      "darkTitle": "Cambiar a Modo Oscuro",
+      "darkAria": "Botón Modo Oscuro"
     }
   },
   "mainFooter": {
-    "sign": "Derechos reservados &copy; Ronald Alexander 2023"
+    "footer": "Pie de página",
+    "social": {
+      "LinkedInTitle": "Perfil de LinkedIn",
+      "LinkedInAria": "Perfil de LinkedIn",
+      "GitHubTitle": "Perfil de GitHub",
+      "GitHubAria": "Perfil de GitHub",
+      "TwitterTitle": "Perfil de Twitter",
+      "TwitterAria": "Perfil de Twitter",
+      "MediumTitle": "Perfil de Medium",
+      "MediumAria": "Perfil de Medium",
+      "cardTitle": "Tarjeta Profesional",
+      "cardAria": "Tarjeta Profesional"
+    },
+    "sign": "Todos los derechos reservados © Ronald Alexander 2023"
   }
 }

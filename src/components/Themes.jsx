@@ -20,10 +20,19 @@ const Themes = ({ theme, setTheme, toggleMenu }) => {
 
   return (
     <div className="switch-mode-box">
-    <button className={`light-mode-btn ${theme === 'light' ? 'active' : ''}`} onClick={() => {toggleLightMode(); toggleMenu();}} title={t("mainHeader.theme.lightTitle")}>
+    <button
+      className={`light-mode-btn ${theme === 'light' ? 'active' : ''}`}
+      onClick={() => {toggleLightMode(); toggleMenu();}}
+      title={t("mainHeader.theme.lightTitle")}
+      aria-label={t('mainHeader.theme.ligthAria')}>
       <span className="nav-icon material-symbols-rounded material-symbols-outlined">light_mode</span>
     </button>
-    <button className={`dark-mode-btn ${theme === 'dark' ? 'active' : ''}`} onClick={() => {toggleDarkMode(); toggleMenu();}}>
+    <button
+      className={`dark-mode-btn ${theme === 'dark' ? 'active' : ''}`}
+      onClick={() => {toggleDarkMode(); toggleMenu();}}
+      title={t('mainHeader.theme.darkTitle')}
+      aria-label={t('mainHeader.theme.darkAria')}
+      >
       <span className="nav-icon material-symbols-rounded material-symbols-outlined">dark_mode</span>
     </button>
   </div>
