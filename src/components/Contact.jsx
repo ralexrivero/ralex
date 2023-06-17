@@ -1,15 +1,23 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const [t, i18n] = useTranslation('global');
   const [state, handleSubmit] = useForm("xlekkear");
   if (state.succeeded) {
       return (
         <div className="success-message">
-          <p>¡Genial! 🎉 ¡Tu mensaje fue enviado! 💌</p>
-          <p>¡Mil gracias por tomarte el tiempo de escribirme! 🙌 Valoro tus palabras y te prometo que te voy a contestar a la brevedad. Mientras tanto, da una vuelta por el sitio y conóceme un poco más. 🌟</p>
-          <p>¡Espero que tengas una buena experiencia! 💫✨</p>
-          <Link to="/" className="success-message-link"><span className="material-symbols-rounded">home</span></Link>
+          <p>{t('contact.form.par01')}</p>
+          <p>{t('contact.form.par02')}</p>
+          <p>{t('contact.form.par03')}</p>
+          <Link to="/" className="success-message-link">
+            <span
+              className="material-symbols-rounded"
+              title={t('contact.homeTitle')}
+              aria-label={t('contact.homeAria')}
+              >home</span>
+          </Link>
       </div>
       );
   }
@@ -18,14 +26,14 @@ const Contact = () => {
     <section className="section-contact">
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="contact-form-info">
-          <p>Si tienes alguna consulta o deseas hablar sobre un proyecto, envíame un <a className="link-email" href="mailto:ralexrivero@gmail.com" target="_blank">correo electrónico ✉️</a> o llena el formulario. Estoy aquí para ayudarte con gusto.</p>
-          <p>Email<a className="link-email-text" href="mailto:ralexrivero@gmail.com" target="_blank">ralexrivero@gmail.com</a></p>
+          <p>{t('contact.success.par01')}<a className="link-email" href="mailto:ralexrivero@gmail.com" target="_blank">{t('contact.success.email')}</a>{t('contact.success.par02')}</p>
+          <p>{t('contact.success.email')}<a className="link-email-text" href="mailto:ralexrivero@gmail.com" target="_blank">ralexrivero@gmail.com</a></p>
         </div>
         <input
           id="name"
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder={t('contact.input.namePH')}
           required
         />
         <ValidationError
@@ -37,7 +45,7 @@ const Contact = () => {
           id="email"
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder={t('contact.input.emailPH')}
           required
         />
         <ValidationError
@@ -48,7 +56,7 @@ const Contact = () => {
         <textarea
           id="message"
           name="message"
-          placeholder="Message"
+          placeholder={t('contact.input.messagePH')}
           required
         />
         <ValidationError
@@ -61,7 +69,7 @@ const Contact = () => {
           type="submit"
           disabled={state.submitting}
         >
-          Submit
+          {t('contact.input.submitTxt')}
         </button>
       </form>
     </section>

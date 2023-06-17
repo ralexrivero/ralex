@@ -43,5 +43,25 @@
       "cardAria": "Professional Business Card"
     },
     "sign": "All Rights Reserved © Ronald Alexander 2023"
+  },
+  "contact": {
+    "form": {
+      "par01": "Awesome! 🎉 Your message has been sent! 💌",
+      "par02": "Thank you so much for taking the time to write to me! 🙌 I appreciate your words and promise to get back to you as soon as possible. In the meantime, feel free to browse the site and get to know me a little better. 🌟",
+      "par03": "I hope you have a great experience! 💫✨"
+    },
+  "success": {
+    "par01": "If you have any inquiries or want to discuss a project, send me an ",
+    "email": "email ✉️",
+    "par02": " or fill out the form. I'm here to assist you with pleasure."
+    },
+  "homeTitle": "Back to Home",
+  "homeAria": "Button to go back to the home page",
+  "input": {
+    "namePH": "name",
+    "emailPH": "email",
+    "messagePH": "Write your message",
+    "submitTxt": "Send"
+    }
   }
 }

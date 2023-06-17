@@ -43,5 +43,25 @@
       "cardAria": "Tarjeta Profesional"
     },
     "sign": "Todos los derechos reservados © Ronald Alexander 2023"
+  },
+  "contact": {
+    "form": {
+      "par01": "¡Genial! 🎉 ¡Tu mensaje fue enviado! 💌",
+      "par02": "¡Mil gracias por tomarte el tiempo de escribirme! 🙌 Valoro tus palabras y te prometo que te voy a contestar a la brevedad. Mientras tanto, da una vuelta por el sitio y conóceme un poco más. 🌟",
+      "par03": "¡Espero que tengas una buena experiencia! 💫✨"
+    },
+    "success": {
+      "par01": "Si tienes alguna consulta o deseas hablar sobre un proyecto, envíame un ",
+      "email": "correo electrónico ✉️ ",
+      "par02": "o llena el formulario. Estoy aquí para ayudarte con gusto."
+    },
+    "homeTitle": "Volver al inicio",
+    "homeAria": "Botón de volver al inicio",
+    "input": {
+      "namePH": "nombre",
+      "emailPH": "correo electrónico",
+      "messagePH": "Escribe tu mensaje",
+      "submitTxt": "Enviar"
+    }
   }
 }
