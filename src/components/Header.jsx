@@ -69,6 +69,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link to="/courses" className="nav-header-links" onClick={toggleMenu}>
+              <span className="material-symbols-outlined">school</span>
+              {t('mainHeader.menu.courses')}
+            </Link>
+          </li>
+          <li>
             <Link to="/contact" className="nav-header-links" onClick={toggleMenu}>
               <span className="material-symbols-rounded">contact_page</span>
               {t('mainHeader.menu.contact')}

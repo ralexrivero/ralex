@@ -9,9 +9,10 @@
       "home": "Inicio",
       "i": "Yo",
       "selfAnalysis": "Autoanálisis",
-      "soYouCanSee": "Para que puedas ver",
+      "soYouCanSee": "Para que veas",
       "accordingToMe": "Según yo",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "courses": "Cursos"
     },
     "lang": {
       "iconTitle": "Menu de cambio de idioma",

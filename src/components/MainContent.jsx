@@ -5,7 +5,7 @@ const MainContent = () => {
   const [t, i18n] = useTranslation("main");
 
   return (
-    <main aria-label="Contenido principal">
+    <div aria-label="Contenido principal">
       <section className="about-section">
         <div className="grid-50-50 about-content">
           <div className="area-left">
@@ -31,7 +31,7 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

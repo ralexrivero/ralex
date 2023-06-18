@@ -21,7 +21,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #07080d;
   color: #f8f8f8;
-  height: 100%;
 }
 
 img {
@@ -50,20 +49,23 @@ a {
     "header"
     "main"
     "footer";
-  grid-template-rows: auto 80% auto;
   min-height: 100vh;
+
 }
 
 header {
   grid-area: header;
+  align-self: start;
 }
 
 main {
   grid-area: main;
+  align-self: start;
 }
 
 footer {
   grid-area: footer;
+  align-self: end;
 }
 
 /**************************************
@@ -91,7 +93,7 @@ footer {
 }
 
 .nav-header-open {
-  height: 370px;
+  height: 403px;
 }
 
 .nav-header-links,
@@ -261,6 +263,8 @@ footer {
 **************************************/
 main {
   width: 100%;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 .about-content {
@@ -541,6 +545,11 @@ textarea {
 
 @media screen and (min-width: 768px) {
 
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   /* Grid */
 
   .grid-50-50 {
@@ -635,4 +644,23 @@ textarea {
     flex-direction: row;
     justify-content: center;
   }
+}
+
+/**************************************
+ * me section
+**************************************/
+
+.section-me {
+}
+
+.section-me article {
+  margin-bottom: 1rem;
+}
+
+/**************************************
+ * me section
+**************************************/
+
+.section-self p {
+  margin-bottom: 1rem;
 }
