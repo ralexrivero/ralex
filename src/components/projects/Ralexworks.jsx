@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SiReact, SiCss3, SiVite, SiJavascript, SiGooglefonts, SiMaterialdesignicons, SiGithubpages, SiUbuntu, SiGnubash, SiDocker, SiNodedotjs, SiNpm, SiGit, SiGithub, SiVisualstudiocode } from "@icons-pack/react-simple-icons";
+import Tag from "../search/Tag";
 
 const Ralexworks = () => {
   return (
@@ -36,6 +37,14 @@ const Ralexworks = () => {
         </ul>
 
         <Link className="link-btn" to="/so-you-can-see/">proyectos</Link>
+
+        <div className="tags">
+          <Tag filter="Front-end" />
+          <Tag filter="React.js" />
+          <Tag filter="Web design" />
+          <Tag filter="Personal branding" />
+        </div>
+
     </section>
   )
 }

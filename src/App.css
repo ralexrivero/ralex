@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 /**************************************
  * Normalize
@@ -21,6 +21,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #07080d;
   color: #f8f8f8;
+  font-weight: 400;
 }
 
 img {
@@ -261,6 +262,7 @@ footer {
 /**************************************
  * Main
 **************************************/
+
 main {
   width: 100%;
   padding-left: .5rem;
@@ -566,11 +568,24 @@ textarea {
 
 }
 
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 .card-project {
-  border: 1px solid red;
+  padding: 1rem 1rem 2rem;
+  margin: 1rem auto;
+  border: 1px solid #808185;
   border-radius: .75rem;
-  padding: 1rem;
-  margin: .5rem;
+}
+
+.project-title {
+  color: #cdff78;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .card-technologies {
@@ -617,7 +632,7 @@ textarea {
 }
 
 /**************************************
- * Misc
+ * Links buttons
 **************************************/
 
 .link-btn,
@@ -627,8 +642,29 @@ textarea {
   padding: .5rem;
   margin-top: 1rem;
   margin-right: .5rem;
-  border: 1px solid green;
+  border: 1px solid #808185;
   border-radius: .5rem;
+  cursor: pointer;
+}
+
+/**************************************
+ * Search
+**************************************/
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.search-tag {
+  font-size: .6rem;
+  padding: .3rem .5rem;
+  margin-right: .2rem;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -730,6 +766,10 @@ textarea {
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
   }
 
+  /* card project */
+  .card-project {
+    width: 45%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
