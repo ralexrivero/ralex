@@ -40,7 +40,7 @@ const SoYouCanSee = () => {
 
         </article>
         {/* ProBusinessCard*/}
-        {/* <article className="card-project">
+        <article className="card-project">
           <h2 className="project-title">ProBusinessCard</h2>
           <h3>Tarjeta digital de negocios</h3>
           <ul className="project-links">
@@ -69,7 +69,7 @@ const SoYouCanSee = () => {
             <Tag filter="Personal branding" />
           </div>
 
-        </article> */}
+        </article>
       </div>
 
     </section>
