@@ -664,3 +664,49 @@ textarea {
 .section-self p {
   margin-bottom: 1rem;
 }
+
+/**************************************
+ * so you can see section
+**************************************/
+
+.section-soyoucansee {
+
+}
+
+.card-project {
+  border: 1px solid red;
+  border-radius: .75rem;
+  padding: 1rem;
+  margin: .5rem;
+}
+
+.card-technologies {
+  padding: 1rem;
+}
+
+.tech-list {
+  display: flex;
+}
+
+.badge-tech {
+}
+
+/**************************************
+ * so you can see section
+**************************************/
+
+.section-project-detail {
+
+}
+
+.project-name {
+  font-weight: bold;
+}
+
+.project-description {
+
+}
+
+.project-description p {
+  margin-bottom: 1rem;
+}
