@@ -540,7 +540,102 @@ textarea {
 }
 
 /**************************************
+ * me section
+**************************************/
+
+.section-me {
+}
+
+.section-me article {
+  margin-bottom: 1rem;
+}
+
+/**************************************
+ * me section
+**************************************/
+
+.section-self p {
+  margin-bottom: 1rem;
+}
+
+/**************************************
+ * so you can see section
+**************************************/
+
+.section-soyoucansee {
+
+}
+
+.card-project {
+  border: 1px solid red;
+  border-radius: .75rem;
+  padding: 1rem;
+  margin: .5rem;
+}
+
+.card-technologies {
+  padding: 1rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.badge-tech {
+  margin-right: 1rem;
+}
+
+.project-overview {
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/**************************************
+ * project page
+**************************************/
+
+.section-project-detail {
+
+}
+
+.project-name {
+  font-weight: bold;
+}
+
+.project-description p {
+  margin-bottom: 1rem;
+}
+
+/**************************************
+ * Misc
+**************************************/
+
+.link-btn,
+.link-btn:link,
+.link-btn:visited {
+  color: #f8f8f8;
+  padding: .5rem;
+  margin-top: 1rem;
+  margin-right: .5rem;
+  border: 1px solid green;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/**************************************
+/**************************************
  * Media queries
+**************************************
 **************************************/
 
 @media screen and (min-width: 768px) {
@@ -644,72 +739,4 @@ textarea {
     flex-direction: row;
     justify-content: center;
   }
-}
-
-/**************************************
- * me section
-**************************************/
-
-.section-me {
-}
-
-.section-me article {
-  margin-bottom: 1rem;
-}
-
-/**************************************
- * me section
-**************************************/
-
-.section-self p {
-  margin-bottom: 1rem;
-}
-
-/**************************************
- * so you can see section
-**************************************/
-
-.section-soyoucansee {
-
-}
-
-.card-project {
-  border: 1px solid red;
-  border-radius: .75rem;
-  padding: 1rem;
-  margin: .5rem;
-}
-
-.card-technologies {
-  padding: 1rem;
-}
-
-.tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.badge-tech {
-}
-
-/**************************************
- * so you can see section
-**************************************/
-
-.section-project-detail {
-
-}
-
-.project-name {
-  font-weight: bold;
-}
-
-.project-description {
-
-}
-
-.project-description p {
-  margin-bottom: 1rem;
 }

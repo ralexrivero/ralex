@@ -30,8 +30,12 @@ const Ralexworks = () => {
           <p>La aplicación es una Single Page Application (SPA) con una arquitectura modular basada en componentes. Se implementó un Router para la gestión de contenidos y navegación, y se utilizaron useState y useEffect para gestionar los estados, lo que permitió la alternancia del menú responsivo, la personalización de los temas gráficos y el cambio de idiomas. La internacionalización se realizó a través de i18n para adaptarse a diferentes idiomas y culturas. El diseño de la interfaz se enfocó en un estilo minimalista con alto contraste, y se ofrecen opciones de light mode y dark mode.</p>
           <p>El despliegue se realizó mediante un pipeline automatizado de GitHub Pages, alojado en GitHub, para garantizar una publicación rápida y accesible. Esto proporciona a los visitantes y usuarios una experiencia fluida y conveniente al acceder al proyecto.</p>
         </div>
+        <ul className="project-links">
+          <li><a className="link-btn" href="https://ralex.works" target="_blank">sitio web</a></li>
+          <li><a className="link-btn" href="https://github.com/ralexrivero/ralex" target="_blank">repositorio</a></li>
+        </ul>
 
-        <Link to="/so-you-can-see/"><button>proyectos</button></Link>
+        <Link className="link-btn" to="/so-you-can-see/">proyectos</Link>
     </section>
   )
 }
