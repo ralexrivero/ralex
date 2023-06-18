@@ -23,7 +23,7 @@ const Ralexworks = () => {
             <li className="badge-tech"><SiNpm title="npm" color="default" /></li>
             <li className="badge-tech"><SiGit title="Git" color="default" /></li>
             <li className="badge-tech"><SiGithub title="Github" color="default" /></li>
-            <li className="badge-tech"><SiVisualstudiocode title="Github" color="default" /></li>
+            <li className="badge-tech"><SiVisualstudiocode title="VS Code" color="default" /></li>
           </ul>
         </div>
         <div className="project-description">

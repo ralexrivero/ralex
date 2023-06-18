@@ -7,6 +7,7 @@ import Me from './components/Me';
 import Self from './components/Self';
 import SoYouCanSee from './components/SoYouCanSee';
 import Ralexworks from './components/projects/Ralexworks';
+import Probusinesscard from './components/projects/Probusinesscard';
 import AccordingToMe from './components/AccordingToMe';
 import Contact from './components/Contact';
 import Courses from './components/Courses';
@@ -24,7 +25,8 @@ function App() {
           <Route path="/me" element={<Me/>} />
           <Route path="/self-analysis" element={<Self />} />
           <Route path="/so-you-can-see" element={<SoYouCanSee />} />
-            <Route path="/so-you-can-see/ralexworks" element={< Ralexworks />} />
+            <Route path="/so-you-can-see/ralexworks" element={<Ralexworks />} />
+            <Route path="/so-you-can-see/probusinesscard" element={<Probusinesscard />} />
           <Route path="/according-to-me" element={<AccordingToMe />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/contact" element={<Contact />} />
