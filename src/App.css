@@ -610,8 +610,9 @@ textarea {
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;;
-  margin-top: .75rem;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 /**************************************
@@ -638,11 +639,11 @@ textarea {
 .link-btn:link,
 .link-btn:visited {
   color: #f8f8f8;
-  padding: .5rem;
+  padding: .4rem .6rem;
   margin-top: 1rem;
   margin-right: .5rem;
   border: 1px solid #808185;
-  border-radius: .5rem;
+  border-radius: .75rem;
   cursor: pointer;
 }
 
@@ -673,7 +674,7 @@ textarea {
 .section-courses {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: flex-start;
 }
 
@@ -682,6 +683,7 @@ textarea {
   padding-bottom: 2rem;
   border: 1px solid #808185;
   border-radius: .75rem;
+  margin-bottom: 1rem;
 }
 
 .course-description p {
@@ -692,6 +694,16 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+.course-content {
+  padding-left: 2rem;
+  padding-right: .5rem;
+  margin-bottom: 1rem;
+}
+
+.project-resume {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 /**************************************
  * progress bar
 **************************************/
@@ -873,12 +885,12 @@ textarea {
 
   /* card project */
   .card-project {
-    width: 45%;
+    width: 48%;
   }
 
   /* courses project */
   .course-overview {
-    width: 45%;
+    width: 48%;
   }
 }
 
