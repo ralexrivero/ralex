@@ -16,7 +16,7 @@ const SoYouCanSee = () => {
             <li><a className="link-btn" href="https://ralex.works" target="_blank">sitio web</a></li>
             <li><a className="link-btn" href="https://github.com/ralexrivero/ralex" target="_blank">repositorio</a></li>
           </ul>
-          <p>Mi proyecto personal en Ralex.works, donde aplico los principios del Personal Branding, Diseño Gráfico, Desarrollo Web Full Stack y DevOps.</p>
+          <p>Mi proyecto personal en ralex.works, donde aplico los principios del Personal Branding, Diseño Gráfico, Desarrollo Web Full Stack y DevOps.</p>
 
           <div className="card-technologies">
             <h2>Tecnologías</h2>
@@ -70,6 +70,8 @@ const SoYouCanSee = () => {
           </div>
 
         </article>
+        {/* tify.one */}
+        {/* npm aquarius.css */}
       </div>
 
     </section>

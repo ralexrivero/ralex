@@ -64,5 +64,12 @@
       "messagePH": "Escribe tu mensaje",
       "submitTxt": "Enviar"
     }
+  },
+  "progress": {
+    "1": "Fundational",
+    "2": "Intermediate",
+    "3": "Advanced",
+    "4": "Expert",
+    "5": "Master"
   }
 }

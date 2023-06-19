@@ -11,6 +11,7 @@ import Probusinesscard from './components/projects/Probusinesscard';
 import AccordingToMe from './components/AccordingToMe';
 import Contact from './components/Contact';
 import Courses from './components/Courses';
+import Frontend101 from './components/courses/Frontend101';
 
 import './App.css';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/so-you-can-see/probusinesscard" element={<Probusinesscard />} />
           <Route path="/according-to-me" element={<AccordingToMe />} />
           <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/frontend101" element={<Frontend101 />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
