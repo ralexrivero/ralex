@@ -14,7 +14,10 @@ const Level = (props) => {
   return (
     <div>
       <div className="progressbar">
-        <div className={`success ${success[props.level]}`}>
+        <div
+          className={`success ${success[props.level]}`}
+          title={t('progress.barTitle')}
+          >
           <span>{t(`progress.${props.level}`)}</span>
         </div>
       </div>

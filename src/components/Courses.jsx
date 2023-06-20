@@ -2,30 +2,29 @@ import { Link } from "react-router-dom";
 import { SiHtml5, SiCss3, SiJavascript, SiPostgresql, SiReact } from '@icons-pack/react-simple-icons';
 import Tag from "./search/Tag";
 import Level from './Level';
+import StackIcons from "./StackIcons";
+import { useTranslation } from "react-i18next";
 
 const Courses = () => {
+  const [t, i18n] = useTranslation('courses')
   return (
     <section className="section-courses">
       {/** Frontend101 */}
       <article className="course-overview">
-        <h2 className="h2-highlight">Frontend 101</h2>
-        <p>Fundamentos del desarrollo Web desde cero</p>
+        <h2 className="h2-highlight">{t('frontend101.general.title')}</h2>
+        <p>{t('frontend101.general.subTitle')}</p>
         <div className="card-technologies">
-            <h2>Tecnologías</h2>
-            <ul className="project-links">
-              <li className="badge-tech"><SiHtml5 title="HTML" color="default" /></li>
-              <li className="badge-tech"><SiCss3 title="CSS" color="default" /></li>
-              <li className="badge-tech"><SiJavascript title="JavaScript" color="default" /></li>
-            </ul>
+            <h2>{t('frontend101.general.stackTitle')}</h2>
+            <StackIcons icons={t('frontend101.general.stackIcons')}/>
           </div>
           <div className="course-level">
-            <Level level="1" />
+            <Level level={t('frontend101.general.level')}/>
           </div>
         <div className="course-description">
-          <p>Frontend 101 es el curso perfecto para adentrarte en el emocionante mundo del desarrollo web frontend. Aprenderás desde los conceptos fundamentales hasta las tecnologías más relevantes, como HTML, CSS y JavaScript, construyendo una base sólida para crear páginas web impactantes.</p>
-          <p>Sumérgete en proyectos prácticos, laboratorios y materiales teóricos diseñados para guiarte en el proceso de construcción de páginas web estáticas. Con Frontend 101, te convertirás en un verdadero maestro del frontend y obtendrás los conocimientos necesarios para dar tus primeros pasos en el mundo de la programación y el desarrollo web frontend.</p>
+          <p>{t('frontend101.general.description.par01')}</p>
+          <p>{t('frontend101.general.description.par02')}</p>
         </div>
-        <Link className="link-btn" to="/courses/frontend101/">Ver más</Link>
+        <Link className="link-btn" to="/courses/frontend101/">{t('frontend101.general.btnTxt')}</Link>
         <div className="tags">
             <Tag filter="Front-end" />
             <Tag filter="HTML" />
@@ -36,52 +35,175 @@ const Courses = () => {
       </article>
       {/** PostgresSql101 */}
       <article className="course-overview">
-        <h2 className="h2-highlight">Introducción a PostgreSQL</h2>
-        <p>Aprende los fundamentos de PostgreSQL</p>
+        <h2 className="h2-highlight">{t('postgresql101.general.title')}</h2>
+        <p>{t('postgresql101.general.subTitle')}</p>
         <div className="card-technologies">
-          <h2>Tecnologías</h2>
-          <ul className="project-links">
-            <li className="badge-tech"><SiPostgresql title="PostgreSQL" color="default" /></li>
-          </ul>
+            <h2>{t('postgresql101.general.stackTitle')}</h2>
+            <StackIcons icons={t('postgresql101.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('postgresql101.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('postgresql101.general.description.par01')}</p>
+          <p>{t('postgresql101.general.description.par02')}</p>
         </div>
-    <div className="course-level">
-      <Level level="1" />
-    </div>
-    <div className="course-description">
-      <p>El curso de Introducción a PostgreSQL te ofrece la oportunidad de sumergirte en el fascinante mundo de las bases de datos relacionales. Aprenderás desde los conceptos básicos hasta las técnicas más avanzadas de PostgreSQL, adquiriendo los conocimientos necesarios para administrar y utilizar eficazmente esta poderosa base de datos.</p>
-      <p>Explora ejemplos prácticos, laboratorios y material teórico diseñado para guiarte en el proceso de comprensión de PostgreSQL. Con el curso de Introducción a PostgreSQL, estarás preparado para trabajar con bases de datos, escribir consultas avanzadas y desarrollar aplicaciones con esta tecnología líder en la industria.</p>
-    </div>
-    {/* <Link className="link-btn" to="/courses/intro-postgresql/">Ver más</Link> */}
-    <div className="tags">
-      <Tag filter="Base de datos" />
-      <Tag filter="PostgreSQL" />
-      <Tag filter="Curso" />
-    </div>
+        {/* <Link className="link-btn" to="/courses/postgresql101/">{t('postgresql101.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
       </article>
       {/** React.js */}
       <article className="course-overview">
-  <h2 className="h2-highlight">Introducción a React.js</h2>
-  <p>Aprende los fundamentos de React.js</p>
-  <div className="card-technologies">
-    <h2>Tecnologías</h2>
-    <ul className="project-links">
-      <li className="badge-tech"><SiReact title="React.js" color="default" /></li>
-    </ul>
-  </div>
-  <div className="course-level">
-    <Level level="1" />
-  </div>
-  <div className="course-description">
-    <p>El curso de Introducción a React.js te ofrece una emocionante oportunidad de sumergirte en el apasionante mundo del desarrollo web frontend con React.js. Desde los conceptos básicos hasta las técnicas más avanzadas, adquirirás los conocimientos necesarios para crear aplicaciones web interactivas y dinámicas.</p>
-    <p>Sumérgete en una experiencia de aprendizaje enriquecedora a través de proyectos prácticos, desafiantes laboratorios y material teórico cuidadosamente diseñado para guiarte en el proceso de comprensión de React.js. Con el curso de Introducción a React.js, estarás preparado para crear interfaces de usuario modernas y atractivas, gestionar eficientemente el estado de tus aplicaciones y aprovechar al máximo la reutilización de componentes en tus proyectos de desarrollo frontend.</p>
-  </div>
-  {/* <Link className="link-btn" to="/courses/intro-react/">Ver más</Link> */}
-  <div className="tags">
-    <Tag filter="Frontend" />
-    <Tag filter="React.js" />
-    <Tag filter="Curso" />
-  </div>
-</article>
+        <h2 className="h2-highlight">{t('reactjs101.general.title')}</h2>
+        <p>{t('reactjs101.general.subTitle')}</p>
+        <div className="card-technologies">
+            <h2>{t('reactjs101.general.stackTitle')}</h2>
+            <StackIcons icons={t('reactjs101.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('reactjs101.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('reactjs101.general.description.par01')}</p>
+          <p>{t('reactjs101.general.description.par02')}</p>
+        </div>
+        {/* <Link className="link-btn" to="/courses/reactjs101/">{t('reactjs101.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
+      </article>
+      {/** Python */}
+      <article className="course-overview">
+        <h2 className="h2-highlight">{t('python101.general.title')}</h2>
+        <p>{t('python101.general.subTitle')}</p>
+        <div className="card-technologies">
+            <h2>{t('python101.general.stackTitle')}</h2>
+            <StackIcons icons={t('python101.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('python101.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('python101.general.description.par01')}</p>
+          <p>{t('python101.general.description.par02')}</p>
+        </div>
+        {/* <Link className="link-btn" to="/courses/python101/">{t('python101.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
+      </article>
+      {/** Django */}
+      <article className="course-overview">
+        <h2 className="h2-highlight">{t('django102.general.title')}</h2>
+        <p>{t('django102.general.subTitle')}</p>
+        <div className="card-technologies">
+            <h2>{t('django102.general.stackTitle')}</h2>
+            <StackIcons icons={t('django102.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('django102.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('django102.general.description.par01')}</p>
+          <p>{t('django102.general.description.par02')}</p>
+        </div>
+        {/* <Link className="link-btn" to="/courses/django102/">{t('django102.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
+      </article>
+      {/** MongoDb */}
+      <article className="course-overview">
+        <h2 className="h2-highlight">{t('mongodb101.general.title')}</h2>
+        <p>{t('mongodb101.general.subTitle')}</p>
+        <div className="card-technologies">
+            <h2>{t('mongodb101.general.stackTitle')}</h2>
+            <StackIcons icons={t('mongodb101.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('mongodb101.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('mongodb101.general.description.par01')}</p>
+          <p>{t('mongodb101.general.description.par02')}</p>
+        </div>
+        {/* <Link className="link-btn" to="/courses/mongodb101/">{t('mongodb101.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
+      </article>
+      {/** mysql */}
+      <article className="course-overview">
+        <h2 className="h2-highlight">{t('mysql101.general.title')}</h2>
+        <p>{t('mysql101.general.subTitle')}</p>
+        <div className="card-technologies">
+            <h2>{t('mysql101.general.stackTitle')}</h2>
+            <StackIcons icons={t('mysql101.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('mysql101.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('mysql101.general.description.par01')}</p>
+          <p>{t('mysql101.general.description.par02')}</p>
+        </div>
+        {/* <Link className="link-btn" to="/courses/mysql101/">{t('mysql101.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
+      </article>
+      {/** C */}
+      <article className="course-overview">
+        <h2 className="h2-highlight">{t('c101.general.title')}</h2>
+        <p>{t('c101.general.subTitle')}</p>
+        <div className="card-technologies">
+            <h2>{t('c101.general.stackTitle')}</h2>
+            <StackIcons icons={t('c101.general.stackIcons')}/>
+          </div>
+          <div className="course-level">
+            <Level level={t('c101.general.level')}/>
+          </div>
+        <div className="course-description">
+          <p>{t('c101.general.description.par01')}</p>
+          <p>{t('c101.general.description.par02')}</p>
+        </div>
+        {/* <Link className="link-btn" to="/courses/c101/">{t('c101.general.btnTxt')}</Link> */}
+        <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="HTML" />
+            <Tag filter="CSS" />
+            <Tag filter="JavaScript" />
+            <Tag filter="Curso" />
+          </div>
+      </article>
+      {/** Git y Github */}
+      {/** Bash */}
+      {/** JavaScript intermedio */}
     </section>
   )
 }

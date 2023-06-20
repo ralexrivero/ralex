@@ -66,10 +66,11 @@
     }
   },
   "progress": {
-    "1": "Fundational",
-    "2": "Intermediate",
-    "3": "Advanced",
-    "4": "Expert",
-    "5": "Master"
+    "1": "Fundacional",
+    "2": "Intermedio",
+    "3": "Avanzado",
+    "4": "Experto",
+    "5": "Maestro",
+    "barTitle": "Nivel del curso"
   }
 }

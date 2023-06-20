@@ -612,7 +612,7 @@ textarea {
   flex-wrap: wrap;
   justify-content: flex-start;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 /**************************************
@@ -647,6 +647,12 @@ textarea {
   cursor: pointer;
 }
 
+.light-theme .link-btn,
+.light-theme .link-btn:link,
+.light-theme .link-btn:visited {
+  color: #07080d;
+}
+
 /**************************************
  * Search
 **************************************/
@@ -675,7 +681,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .course-overview {
