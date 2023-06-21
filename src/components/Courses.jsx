@@ -50,10 +50,10 @@ const Courses = () => {
         </div>
         {/* <Link className="link-btn" to="/courses/postgresql101/">{t('postgresql101.general.btnTxt')}</Link> */}
         <div className="tags">
-            <Tag filter="Front-end" />
-            <Tag filter="HTML" />
-            <Tag filter="CSS" />
-            <Tag filter="JavaScript" />
+            <Tag filter="RDBMS" />
+            <Tag filter="PostgreSQL" />
+            <Tag filter="Data Base" />
+            <Tag filter="SQL" />
             <Tag filter="Curso" />
           </div>
       </article>
@@ -98,10 +98,9 @@ const Courses = () => {
         </div>
         {/* <Link className="link-btn" to="/courses/python101/">{t('python101.general.btnTxt')}</Link> */}
         <div className="tags">
-            <Tag filter="Front-end" />
-            <Tag filter="HTML" />
-            <Tag filter="CSS" />
-            <Tag filter="JavaScript" />
+            <Tag filter="Backend" />
+            <Tag filter="High Level" />
+            <Tag filter="Python" />
             <Tag filter="Curso" />
           </div>
       </article>
@@ -122,10 +121,10 @@ const Courses = () => {
         </div>
         {/* <Link className="link-btn" to="/courses/django102/">{t('django102.general.btnTxt')}</Link> */}
         <div className="tags">
-            <Tag filter="Front-end" />
-            <Tag filter="HTML" />
-            <Tag filter="CSS" />
-            <Tag filter="JavaScript" />
+            <Tag filter="Backend" />
+            <Tag filter="Django" />
+            <Tag filter="Python" />
+            <Tag filter="Framework" />
             <Tag filter="Curso" />
           </div>
       </article>
@@ -146,10 +145,10 @@ const Courses = () => {
         </div>
         {/* <Link className="link-btn" to="/courses/mongodb101/">{t('mongodb101.general.btnTxt')}</Link> */}
         <div className="tags">
-            <Tag filter="Front-end" />
-            <Tag filter="HTML" />
-            <Tag filter="CSS" />
-            <Tag filter="JavaScript" />
+            <Tag filter="RDBMS" />
+            <Tag filter="MongoDB" />
+            <Tag filter="Data Base" />
+            <Tag filter="No-SQL" />
             <Tag filter="Curso" />
           </div>
       </article>
@@ -170,10 +169,10 @@ const Courses = () => {
         </div>
         {/* <Link className="link-btn" to="/courses/mysql101/">{t('mysql101.general.btnTxt')}</Link> */}
         <div className="tags">
-            <Tag filter="Front-end" />
-            <Tag filter="HTML" />
-            <Tag filter="CSS" />
-            <Tag filter="JavaScript" />
+            <Tag filter="RDBMS" />
+            <Tag filter="mysql" />
+            <Tag filter="Data Base" />
+            <Tag filter="SQL" />
             <Tag filter="Curso" />
           </div>
       </article>
@@ -194,10 +193,8 @@ const Courses = () => {
         </div>
         {/* <Link className="link-btn" to="/courses/c101/">{t('c101.general.btnTxt')}</Link> */}
         <div className="tags">
-            <Tag filter="Front-end" />
-            <Tag filter="HTML" />
-            <Tag filter="CSS" />
-            <Tag filter="JavaScript" />
+            <Tag filter="Low Level" />
+            <Tag filter="C" />
             <Tag filter="Curso" />
           </div>
       </article>

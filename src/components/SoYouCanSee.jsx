@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SiReact, SiCss3 } from '@icons-pack/react-simple-icons';
+import { SiReact, SiCss3, SiNpm, SiPython, SiDjango } from '@icons-pack/react-simple-icons';
 import Tag from "./search/Tag";
 
 const SoYouCanSee = () => {
@@ -72,6 +72,34 @@ const SoYouCanSee = () => {
         </article>
         {/* tify.one */}
         {/* npm aquarius.css */}
+                <article className="card-project">
+          <h2 className="project-title">Aquarius CSS</h2>
+          <h3>Framework de CSS</h3>
+          <ul className="project-links">
+            <li><a className="link-btn" href="https://www.npmjs.com/package/aquarius-css" target="_blank">sitio web</a></li>
+            <li><a className="link-btn" href="https://github.com/ralexrivero/aquarius" target="_blank">código</a></li>
+          </ul>
+          <p>Aquarius CSS es un framework de CSS diseñado para brindar una experiencia de usuario atractiva y funcional en aplicaciones web de negocios. Con un enfoque en la optimización de la experiencia del usuario, Aquarius CSS ofrece una amplia gama de características y opciones que ayudan a crear interfaces web altamente efectivas.</p>
+          <div className="card-technologies">
+            <h2>Tecnologías</h2>
+            <ul className="project-links">
+              <li className="badge-tech"><SiCss3 color="default" /></li>
+              <li className="badge-tech"><SiNpm color="default" /></li>
+            </ul>
+          </div>
+          <div className="project-overview">
+            <p>Framework de CSS orientado a la estrategia "mobile first" y layout que combina las ventajas de grid y flexbox. Con diseños fluidos y líquidos, este framework de estilo minimalista es ideal para aplicaciones de negocios y para usuarios que pasan largas horas frente a la pantalla, facilitando un entorno de trabajo cómodo y eficiente. Ofrece una estructura flexible y adaptable, permitiendo que los elementos se ajusten de manera óptima a diferentes tamaños de pantalla.</p>
+          </div>
+
+          {/* <Link className="link-btn" to="/so-you-can-see/probusinesscard">descubre mas</Link> */}
+
+          <div className="tags">
+            <Tag filter="Front-end" />
+            <Tag filter="Web design" />
+            <Tag filter="CSS framework" />
+          </div>
+
+        </article>
       </div>
 
     </section>

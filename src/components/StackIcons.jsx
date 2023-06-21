@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiPostgresql, SiReact, SiPython, SiDjango, SiMongodb, SiMysql, SiC } from '@icons-pack/react-simple-icons';
+import { SiHtml5, SiCss3, SiJavascript, SiPostgresql, SiReact, SiPython, SiDjango, SiMongodb, SiMysql, SiC, SiNpm } from '@icons-pack/react-simple-icons';
 
 const StackIcons = (props) => {
   const { icons } = props;
@@ -14,7 +14,8 @@ const StackIcons = (props) => {
     SiDjango,
     SiMongodb,
     SiMysql,
-    SiC
+    SiC,
+    SiNpm
   };
 
   return (
