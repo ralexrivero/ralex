@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import LogoNieve from '../img/logo_nieve.svg';
-import LogoNegro from '../img/logo_negro.svg';
+import LogoNieve from '../assets/img/logo_nieve.svg';
+import LogoNegro from '../assets/img/logo_negro.svg';
 import Themes from './Themes';
 
 const Header = () => {
