@@ -10,7 +10,8 @@
         "par01": "Frontend 101 is the perfect course to delve into the exciting world of frontend web development. You will learn everything from the fundamental concepts to the most relevant technologies such as HTML, CSS, and JavaScript, building a solid foundation to create stunning web pages.",
         "par02": "Immerse yourself in practical projects, labs, and theoretical materials designed to guide you through the process of building static web pages. With Frontend 101, you will become a true master of frontend and gain the necessary knowledge to take your first steps in the world of programming and frontend web development."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "Front-end,HTML,CSS,JavaScript,course"
     },
     "detail": {}
   },
@@ -25,7 +26,8 @@
         "par01": "The Introduction to PostgreSQL course offers you the opportunity to dive into the fascinating world of relational databases. You will learn everything from the basics to the most advanced techniques of PostgreSQL, acquiring the necessary knowledge to efficiently manage and utilize this powerful database.",
         "par02": "Explore practical examples, labs, and theoretical material designed to guide you through the process of understanding PostgreSQL. With the Introduction to PostgreSQL course, you will be prepared to work with databases, write advanced queries, and develop applications using this industry-leading technology."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "RDBMS,PostgreSQL,Data Base,SQL,course"
     },
     "detail": {}
   },
@@ -40,7 +42,9 @@
         "par01": "The Introduction to React.js course offers you an exciting opportunity to dive into the world of frontend web development with React.js. From the basics to advanced techniques, you will gain the necessary knowledge to create interactive and dynamic web applications.",
         "par02": "Immerse yourself in an enriching learning experience through practical projects, challenging labs, and carefully designed theoretical material to guide you through the process of understanding React.js. With the Introduction to React.js course, you will be prepared to create modern and engaging user interfaces, efficiently manage your application's state, and make the most of component reusability in your frontend development projects."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "Front-end,React.js,HTML,CSS,JavaScript,course"
+
     },
     "detail": {}
   },
@@ -55,7 +59,8 @@
         "par01": "Python 101 is the perfect course to dive into the exciting world of Python programming. You will learn everything from the fundamental concepts to the most relevant technologies, building a solid foundation to create impactful applications.",
         "par02": "Immerse yourself in practical projects, labs, and theoretical materials designed to guide you through the process of building Python applications. With Python 101, you will become a true master of Python and gain the necessary knowledge to take your first steps in the world of programming and software development."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "Backend,High Level, Python, course"
     },
     "detail": {}
   },
@@ -70,7 +75,8 @@
         "par01": "Django 102 is the perfect course to take your Django web development skills to the next level. You will learn advanced techniques and best practices for building robust and scalable web applications using the Django framework.",
         "par02": "Immerse yourself in challenging projects, practical labs, and theoretical materials designed to deepen your Django knowledge. With Django 102, you will become an expert in web application development with Django and be prepared to build high-level professional web projects."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "Backend, Django, Python, Framework, course"
     },
     "detail": {}
   },
@@ -85,7 +91,8 @@
         "par01": "MongoDB 101 is the perfect course to get started with MongoDB, a popular NoSQL database. You will learn the fundamentals of MongoDB, including data modeling, CRUD operations, and querying techniques.",
         "par02": "Explore practical examples, hands-on labs, and theoretical materials designed to guide you in mastering MongoDB. By the end of MongoDB 101, you will have a solid foundation in MongoDB and be ready to work with this powerful database technology."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "NO-SQL, MongoDB, Data Base, course"
     },
     "detail": {}
   },
@@ -100,7 +107,8 @@
         "par01": "MySQL 101 is a comprehensive course that introduces you to the MySQL database management system. You will learn the basics of MySQL, including database design, SQL queries, and database administration.",
         "par02": "Engage in practical projects, hands-on labs, and theoretical materials designed to enhance your MySQL skills. By completing MySQL 101, you will have a solid understanding of MySQL and be prepared to work with databases efficiently and effectively."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "RDBMS, mysql, Data Base, SQL, course"
     },
     "detail": {}
   },
@@ -115,7 +123,8 @@
         "par01": "C 101 is a comprehensive course that introduces you to the C programming language, known for its low-level capabilities and efficiency. You will learn the fundamental concepts of C programming, including variables, control structures, and functions.",
         "par02": "Immerse yourself in practical exercises, coding labs, and theoretical materials designed to strengthen your C programming skills. With C 101, you will gain a solid understanding of low-level programming and be ready to tackle challenging projects in the world of programming."
       },
-      "btnTxt": "Learn More"
+      "btnTxt": "Learn More",
+      "tags": "Low Level, C, course"
     },
     "detail": {}
   }

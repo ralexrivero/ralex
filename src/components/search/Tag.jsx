@@ -1,12 +1,20 @@
 const Tag = (props) => {
+  const tags = props.filter.split(',');
+
   return (
-    <button
-      className="search-tag"
-      title={props.filter}
-      aria-label="filter tag">
-      {props.filter}
-    </button>
-  )
-}
+      tags.map((tag, index) => {
+        return (
+          <button
+            className="search-tag"
+            title={tag}
+            aria-label="filter tag"
+            key={index}
+          >
+            {tag}
+          </button>
+        )
+      })
+      )
+    }
 
 export default Tag;

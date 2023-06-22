@@ -24,11 +24,7 @@ const CourseOverview = (props) => {
       </div>
       <Link className="link-btn" to={`/courses/${props.course}/`}>{t(`${props.course}.general.btnTxt`)}</Link>
       <div className="tags">
-          <Tag filter="Front-end" />
-          <Tag filter="HTML" />
-          <Tag filter="CSS" />
-          <Tag filter="JavaScript" />
-          <Tag filter="Curso" />
+          <Tag filter={t(`${props.course}.general.tags`)} />
         </div>
     </article>
   )
