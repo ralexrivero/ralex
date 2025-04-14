@@ -2,48 +2,18 @@
 
 @layer base {
   html {
-    font-family: 'Standerd', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     background-color: #0E0E0F;
     color: #FFFFFF;
     scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Gilroy', 'Inter', 'Arial', sans-serif;
+    font-family: 'Space Grotesk', 'Inter', 'Arial', sans-serif;
   }
 
-  /* Importar las fuentes */
-  @font-face {
-    font-family: 'Gilroy';
-    src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Gilroy';
-    src: url('/fonts/Gilroy-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Gilroy';
-    src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Standerd';
-    src: url('/fonts/Standerd-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+  /* Importar fuentes desde Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
 }
 
 @layer components {
@@ -53,71 +23,66 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
 
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
+    .container-main {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
+  }
 
-    @media (min-width: 1024px) {
-      padding-left: 72px;
-      padding-right: 72px;
+  @media (min-width: 1024px) {
+    .container-main {
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
     }
   }
 
   .btn-primary {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 1px;
-    border-color: #C7FF6B;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #C7FF6B;
     color: #FFFFFF;
+  }
+
+  .btn-primary:hover {
+    background-color: #C7FF6B;
+    color: #0E0E0F;
+    transform: scale(1.04);
     transition-property: all;
     transition-duration: 300ms;
+  }
 
-    &:hover {
-      background-color: #C7FF6B;
-      color: #0E0E0F;
-      transform: scale(1.04);
-    }
-
-    &:focus {
-      outline-offset: 2px;
-    }
+  .btn-primary:focus {
+    outline-offset: 2px;
   }
 
   .btn-secondary {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 1px;
-    border-color: #262626;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #262626;
     color: #FFFFFF;
+  }
+
+  .btn-secondary:hover {
+    border-color: #C7FF6B;
+    color: #C7FF6B;
     transition-property: all;
     transition-duration: 300ms;
+  }
 
-    &:hover {
-      border-color: #C7FF6B;
-      color: #C7FF6B;
-    }
-
-    &:focus {
-      outline-offset: 2px;
-    }
+  .btn-secondary:focus {
+    outline-offset: 2px;
   }
 
   .navbar-item {
     text-transform: uppercase;
-    font-family: 'Gilroy', 'Inter', 'Arial', sans-serif;
+    font-family: 'Space Grotesk', 'Inter', 'Arial', sans-serif;
     font-weight: 500;
     color: #FFFFFF;
-    transition-property: color;
-    transition-duration: 150ms;
+  }
 
-    &:hover {
-      color: #C7FF6B;
-    }
+  .navbar-item:hover {
+    color: #C7FF6B;
+    transition-property: color;
   }
 }

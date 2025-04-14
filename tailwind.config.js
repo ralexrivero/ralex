@@ -24,8 +24,8 @@ export default {
         'border-gray': '#262626',
       },
       fontFamily: {
-        'gilroy': ['Gilroy', 'Inter', 'Arial', 'sans-serif'],
-        'standerd': ['Standerd', 'system-ui', 'sans-serif'],
+        'gilroy': ['Space Grotesk', 'Inter', 'Arial', 'sans-serif'],
+        'standerd': ['DM Sans', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['6rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
