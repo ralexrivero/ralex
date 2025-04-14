@@ -1,13 +1,19 @@
 import MainLayout from './layouts/MainLayout';
 import Hero from './components/Hero';
-import TrustStrip from './components/TrustStrip';
+import ImpactMetrics from './components/ImpactMetrics';
+import AboutTeaser from './components/AboutTeaser';
+import ServicesSnapshot from './components/ServicesSnapshot';
+import QuoteHighlight from './components/QuoteHighlight';
 
 function App() {
   return (
     <MainLayout>
       <Hero />
-      <TrustStrip />
-      {/* Aquí irían más secciones en una implementación completa */}
+      <ImpactMetrics />
+      <AboutTeaser />
+      <ServicesSnapshot />
+      <QuoteHighlight />
+      {/* Aquí irían más secciones como Projects Carousel, Blog Preview y CTA Banner */}
     </MainLayout>
   );
 }

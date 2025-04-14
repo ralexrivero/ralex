@@ -1,112 +1,140 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
-  // Animación para el grid de fondo
   useEffect(() => {
-    // Esto sería para una animación más compleja en un caso real
-    const grid = heroRef.current;
-    if (!grid) return;
+    setIsVisible(true);
 
-    // Aquí podrías agregar lógica de animación adicional si fuera necesario
+    // Añadir IntersectionObserver para animaciones basadas en scroll
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current);
+      }
+    };
   }, []);
+
+  // Variantes de animación escalonada
+  const staggerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (custom: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        delay: custom * 0.08,
+      },
+    }),
+  };
 
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-background"
-      aria-label="Sección principal"
+      className="relative min-h-[80vh] md:min-h-screen bg-background flex items-center py-24 md:py-[96px] overflow-hidden"
+      aria-label="Hero section"
     >
-      {/* Fondo con grid y blob */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute inset-0 grid grid-cols-12 gap-4">
-          {Array.from({ length: 144 }).map((_, i) => (
-            <div key={i} className="border-[0.5px] border-white/20"></div>
-          ))}
-        </div>
-        <div className="absolute right-0 top-1/4 w-2/3 h-2/3 bg-gradient-to-br from-ralex-blue/30 to-lime-neon/30 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container-main relative grid grid-cols-1 lg:grid-cols-12 gap-8 py-24 lg:py-[96px]">
-        {/* Textos y CTA - ocupan 7 columnas en desktop */}
-        <motion.div
-          className="col-span-1 lg:col-span-7 flex flex-col justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+      <div className="container-main grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
+        <div className="col-span-1 lg:col-span-7 flex flex-col justify-center">
           <motion.h1
-            className="font-gilroy font-bold text-5xl sm:text-6xl lg:text-h1 text-lime-neon leading-tight tracking-tighter mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+            className="font-gilroy font-bold text-lime-neon text-[clamp(3.5rem,6vw,6rem)] leading-[1.1] mb-6"
+            custom={0}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            variants={staggerVariants}
           >
-            Código abierto.<br />
-            Impacto real.
+            Código abierto.<br/>Impacto real.
           </motion.h1>
 
           <motion.p
-            className="font-standerd text-xl text-text-secondary max-w-[40ch] mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            className="font-standerd text-text-secondary text-xl md:text-[1.25rem] leading-relaxed mb-8 max-w-2xl"
+            custom={1}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            variants={staggerVariants}
           >
-            Transformo ideas en software libre robusto y enseño a otros a hacer lo mismo.
+            desarrollador full‑stack que convierte retos complejos en software libre, y comparte cada línea de aprendizaje.
           </motion.p>
 
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-2"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-          >
-            <a href="#contact" className="btn-primary flex items-center gap-2">
+          <div className="flex flex-wrap gap-4">
+            <motion.a
+              href="#contact"
+              className="btn-primary"
+              custom={2}
+              initial="hidden"
+              animate={isVisible ? "visible" : "hidden"}
+              variants={staggerVariants}
+              aria-label="Reserva una llamada de 15 minutos"
+            >
               Reserva una llamada de 15 min
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </a>
-            <a href="#projects" className="btn-secondary">
+            </motion.a>
+
+            <motion.a
+              href="#projects"
+              className="btn-secondary"
+              custom={3}
+              initial="hidden"
+              animate={isVisible ? "visible" : "hidden"}
+              variants={staggerVariants}
+              aria-label="Explora mis proyectos"
+            >
               Explora mis proyectos
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* Visualización 3D - ocupa 6 columnas en desktop */}
-        <motion.div
-          className="col-span-1 lg:col-span-5 relative flex items-center justify-center lg:justify-end"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="relative w-full max-w-md lg:max-w-none">
-            {/* Aquí iría la imagen 3D en un caso real */}
-            <div className="aspect-[16/9] lg:aspect-auto lg:h-[480px] bg-gradient-to-br from-ralex-blue/20 to-lime-neon/20 rounded-xl border border-border-gray flex items-center justify-center">
-              <img
-                src="/logo.svg"
-                alt="Logo Ralex en 3D"
-                className="w-48 h-48 object-contain"
-              />
-            </div>
+            </motion.a>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Indicador de scroll */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.4 }}
+          className="col-span-1 lg:col-span-7 lg:col-start-6 flex items-center justify-center relative"
+          custom={4}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={staggerVariants}
         >
-          <div className="w-8 h-8 rounded-full border border-border-gray flex items-center justify-center animate-bounce-slow">
-            <svg className="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
+          {/* Modelo 3D con fallback - aspect-ratio fijo */}
+          <div className="w-full aspect-[16/9] relative">
+            <img
+              src="/images/hero-3d-fallback.png"
+              alt="Cabeza wireframe multicolor en 3D representando desarrollo creativo"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            {/* Aquí iría el componente 3D real cuando esté disponible */}
           </div>
         </motion.div>
       </div>
+
+      {/* Scroll cue animado con posición correcta */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        animate={{
+          y: [0, 10, 0],
+          opacity: [0.8, 1, 0.8],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "loop"
+        }}
+      >
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4V20M12 20L6 14M12 20L18 14" stroke="#C7FF6B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </motion.div>
     </section>
   );
 };
