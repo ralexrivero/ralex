@@ -1,77 +1,107 @@
-# Portfolio [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2Fralexrivero.github.io)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2Fralexrivero.github.io)
+# Aplicación React con TypeScript
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ralexrivero/ralexrivero.github.io)
+Esta es una aplicación React creada con TypeScript y Vite.
 
-```jsx
-██████   ██████  ██████  ████████ ███████  ██████  ██      ██  ██████
-██   ██ ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██
-██████  ██    ██ ██████     ██    █████   ██    ██ ██      ██ ██    ██
-██      ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██
-██       ██████  ██   ██    ██    ██       ██████  ███████ ██  ██████
+## Requisitos
+
+- Node.js (versión 18.x o superior)
+- npm (versión 9.x o superior)
+- Docker y Docker Compose (para entornos de producción)
+
+## Desarrollo local
+
+1. Instalar dependencias:
+
+```bash
+npm install
 ```
 
-## Content
+2. Iniciar el servidor de desarrollo:
 
-> Static web page to show my projects and my skills.
+```bash
+npm run dev
+```
 
-## Environment
+3. Abrir el navegador en: `http://localhost:5173`
 
-[![Ubuntu](https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A)](https://ubuntu.com/)<!-- ubuntu -->
-[![Bash](https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A)](https://www.gnu.org/software/bash/)<!-- bash -->
-[![Vim](https://img.shields.io/static/v1?label=&message=Vim&color=019733&logo=Vim&logoColor=019733&labelColor=2F333A)](https://www.vim.org/)<!-- vim -->
-[![VS Code](https://img.shields.io/static/v1?label=&message=Visual%20Studio%20Code&color=007ACC&logo=Visual%20Studio%20Code&logoColor=007ACC&labelColor=2F333A)](https://code.visualstudio.com/)<!-- vs code -->
-[![Git](https://img.shields.io/static/v1?label=&message=Git&color=F05032&logo=Git&logoColor=F05032&labelColor=2F333A)](https://git-scm.com/)<!-- git -->
-[![Github](https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A)](https://github.com)<!-- github -->
-[![Docker](https://img.shields.io/static/v1?label=&message=Docker&color=2496ED&logo=Docker&labelColor=2F333A)](https://hub.docker.com)<!-- docker -->
+## Construcción para producción
 
-[![node.js](https://img.shields.io/static/v1?label=&message=Node.js&color=339933&logo=Node.js&logoColor=339933&labelColor=F5F5F5)](https://nodejs.org/en/)<!-- Node.js -->
-[![npm](https://img.shields.io/static/v1?label=&message=npm&color=CB3837&logo=npm&logoColor=CB3837&labelColor=F5F5F5)](https://www.npmjs.com/)<!-- npm -->
-[![React.js](https://img.shields.io/static/v1?label=&message=React.js&color=61DAFB&logo=React&logoColor=61DAFB&labelColor=2F333A)](https://es.reactjs.org/)<!-- React.js -->
+Para construir la aplicación para producción:
 
-[![HTML5](https://img.shields.io/static/v1?label=&message=HTML5&color=E34F26&logo=HTML5&logoColor=E34F26&labelColor=2F333A)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)<!--HTML5-->
-[![CSS3](https://img.shields.io/static/v1?label=&message=CSS3&color=0071B5&logo=CSS3&logoColor=1572B6&labelColor=2F333A)](https://developer.mozilla.org/en-US/docs/Web/CSS)<!-- CSS3 -->
-[![JS](https://img.shields.io/static/v1?label=&message=JavaScript&color=D4B830&logo=JavaScript&logoColor=F7DF1E&labelColor=2F333A)](https://www.javascript.com)<!-- JS -->
-[![Markdown](https://img.shields.io/static/v1?label=&message=Markdown&color=f4f4f4&logo=Markdown&logoColor=f2f2f2&labelColor=2F333A)](https://www.markdownguide.org/)<!-- Markdown -->
+```bash
+npm run build
+```
 
-[![Github Pages](https://img.shields.io/static/v1?label=&message=Github%20Pages&color=232F3E&logo=Github%20Pages&logoColor=222222&labelColor=F5F5F5)](https://pages.github.com/)<!-- Github Pages -->
+Los archivos se generarán en la carpeta `dist/`.
 
-## Tools
+## Ejecución con Docker
 
-- npm
-- vite
-- google analytics
-- search console
-- font awesome
-- xml-sitemaps.com
-- [open graph protocol](https://ogp.me/)
-- shields.io
+1. Construir y iniciar el contenedor:
 
-### Accesibility
+```bash
+docker-compose up -d
+```
 
-- aria labels
-- semantic html
+2. Acceder a la aplicación en: `http://localhost:8080`
 
-### SEO
+## Comandos disponibles
 
-- meta tags
-- sitemap.xml
-- robots.txt
-- [open graph protocol](https://ogp.me/)
+- `npm run dev`: Inicia el servidor de desarrollo
+- `npm run build`: Construye la aplicación para producción
+- `npm run lint`: Ejecuta el linter
+- `npm run preview`: Previsualiza la build de producción localmente
 
-### GH Pages
+# React + TypeScript + Vite
 
-- install GH Pages `npm install gh-pages --save-dev`
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Run project
+Currently, two official plugins are available:
 
-- `npm run dev -- --host 0.0.0.0` to run project in development mode and expose it to the network
-- `npm run build`
-- `npm run deploy`
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Author
+## Expanding the ESLint configuration
 
-<!-- twitter -->
-[![Twitter](https://img.shields.io/twitter/follow/ralex_uy?style=social)](https://twitter.com/ralex_uy) <!-- linkedin --> [![Linkedin](https://img.shields.io/badge/LinkedIn-+29K-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/ronald-rivero/) <!-- github --> [![Github](https://img.shields.io/github/followers/ralexrivero?style=social)](https://github.com/ralexrivero/) <!-- vagrant --> [![Vagrant](https://img.shields.io/static/v1?label=&message=Vagrant%20Profile&color=1868F2&logo=vagrant&labelColor=2F333A)](https://app.vagrantup.com/ralexrivero) <!-- docker --> [![Docker](https://img.shields.io/static/v1?label=&message=Docker%20Profile&color=2496ED&logo=Docker&labelColor=2F333A)](https://hub.docker.com/u/ralexrivero)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-#9e6a03
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
