@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
@@ -24,12 +25,12 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: 'Home', href: '#' },
-    { label: 'Sobre mí', href: '#about' },
-    { label: 'Servicios', href: '#services' },
-    { label: 'Proyectos', href: '#projects' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Contacto', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Sobre mí', href: '/about' },
+    { label: 'Servicios', href: '/services' },
+    { label: 'Proyectos', href: '/projects' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contacto', href: '/contact' },
   ];
 
   return (
@@ -41,22 +42,24 @@ const Navbar = () => {
       >
         <div className="container-main flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 relative z-50">
+          <Link to="/" className="flex items-center gap-2 relative z-50">
             <img src="/logo.svg" alt="Ralex Logo" className="w-8 h-8" />
-            <span className={`font-gilroy font-bold text-xl transition-colors duration-300 ${isMobileMenuOpen ? 'text-lime-neon' : 'text-text-primary'}`}>Ralex.</span>
-          </a>
+            <span className={`font-gilroy font-bold text-xl transition-colors duration-300 ${
+              isMobileMenuOpen ? 'text-lime-neon' : 'text-text-primary'
+            }`}>Ralex.</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="navbar-item relative group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-neon group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             ))}
           </nav>
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -128,15 +129,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose, navItems }) => {
         {/* Navegación */}
         <nav className="mt-16 flex flex-col gap-6">
           {navItems.map((item) => (
-            <motion.a
-              key={item.label}
-              href={item.href}
-              onClick={onClose}
-              className="text-2xl font-gilroy font-medium text-white hover:text-lime-neon transition-colors focus:outline-none focus:text-lime-neon"
-              variants={itemVariants}
-            >
-              {item.label}
-            </motion.a>
+            <motion.div key={item.label} variants={itemVariants}>
+              <Link
+                to={item.href}
+                onClick={onClose}
+                className="text-2xl font-gilroy font-medium text-white hover:text-lime-neon transition-colors focus:outline-none focus:text-lime-neon"
+              >
+                {item.label}
+              </Link>
+            </motion.div>
           ))}
         </nav>
 
