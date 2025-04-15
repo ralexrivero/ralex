@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader';
 import ContactCTA from '../components/ContactCTA';
 
 // Definición del tipo de datos para un artículo de blog
-interface BlogPost {
+export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
@@ -21,7 +21,7 @@ interface BlogPost {
 }
 
 // Datos de ejemplo para artículos de blog
-const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = [
   {
     id: "modern-web-architecture",
     title: "Arquitectura Web Moderna: Un enfoque para aplicaciones escalables",

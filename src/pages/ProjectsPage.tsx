@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader';
 import ContactCTA from '../components/ContactCTA';
 
 // Definición del tipo de datos para un proyecto
-interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;
@@ -19,7 +19,7 @@ interface Project {
 }
 
 // Datos de ejemplo para proyectos
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     id: "api-gateway",
     title: "API Gateway & ETL en AWS",
