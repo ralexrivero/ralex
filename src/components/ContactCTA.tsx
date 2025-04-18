@@ -13,7 +13,7 @@ const ContactCTA: React.FC<ContactCTAProps> = ({
   buttonText = "Contactar ahora"
 }) => {
   return (
-    <section className="py-16 bg-dark-panel border-t border-border-gray">
+    <section className="py-16 bg-dark-panel">
       <div className="container-main">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2

@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     date: "15 junio, 2023",
     readTime: "8 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "arquitectura-web-moderna-enfoque-aplicaciones-escalables",
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     date: "3 agosto, 2023",
     readTime: "6 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "typescript-en-produccion-lecciones-aprendidas",
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
     date: "27 septiembre, 2023",
     readTime: "10 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "data-analytics-python-de-datos-a-decisiones",
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     date: "12 octubre, 2023",
     readTime: "7 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "contenerizacion-mas-alla-docker",
@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
     date: "5 noviembre, 2023",
     readTime: "9 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "sistemas-cms-headless-libertad-desarrolladores-contenidistas",
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 diciembre, 2023",
     readTime: "6 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "diseno-apis-pensando-desarrolladores-usuarios",
@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     date: "23 febrero, 2024",
     readTime: "5 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "tailwind-css-v4-novedades-mejores-practicas",
@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
     date: "10 marzo, 2024",
     readTime: "8 min",
     author: {
-      name: "Raúl Rivero",
+      name: "Ronald Rivero",
       avatar: "/images/avatar.webp"
     },
     slug: "aws-lambda-patrones-arquitectonicos-aplicaciones-serverless",
@@ -316,7 +316,7 @@ const BlogCategories: React.FC = () => {
   const categories = Array.from(new Set(blogPosts.map(post => post.category)));
 
   return (
-    <section className="py-10 bg-dark-panel border-t border-border-gray">
+    <section className="py-10 bg-dark-panel">
       <div className="container-main">
         <div className="flex flex-wrap justify-center gap-4">
           <motion.a
@@ -381,7 +381,7 @@ const BlogGrid: React.FC = () => {
 // Componente para la sección de newsletter
 const NewsletterSection: React.FC = () => {
   return (
-    <section className="py-16 bg-dark-panel border-y border-border-gray">
+    <section className="py-16 bg-dark-panel">
       <div className="container-main">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

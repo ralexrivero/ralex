@@ -190,7 +190,7 @@ const WorkProcess: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-dark-panel border-y border-border-gray">
+    <section className="py-16 bg-dark-panel">
       <div className="container-main">
         <motion.div
           className="text-center mb-12"

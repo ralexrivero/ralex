@@ -181,7 +181,7 @@ const ContactForm: React.FC = () => {
 // Componente para mapa de ubicación
 const LocationMap: React.FC = () => {
   return (
-    <section className="py-16 bg-dark-panel border-t border-border-gray">
+    <section className="py-16 bg-dark-panel">
       <div className="container-main">
         <motion.div
           className="text-center mb-10"

@@ -255,7 +255,7 @@ const FeaturedProjects: React.FC = () => {
 // Sección de grid de proyectos
 const ProjectsGrid: React.FC = () => {
   return (
-    <section className="py-16 bg-dark-panel border-y border-border-gray">
+    <section className="py-16 bg-dark-panel">
       <div className="container-main">
         <motion.h2
           className="font-gilroy font-medium text-3xl md:text-4xl text-text-primary mb-8 text-center"

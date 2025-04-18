@@ -192,7 +192,7 @@ const BlogPostPage: React.FC = () => {
 
               {/* Etiquetas del artículo */}
               <motion.div
-                className="mt-12 pt-8 border-t border-border-gray"
+                className="mt-12 pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -311,7 +311,7 @@ const BlogPostPage: React.FC = () => {
                   )}
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-border-gray">
+                <div className="mt-6 pt-6">
                   <Link to="/blog" className="text-lime-neon hover:underline inline-flex items-center">
                     Ver todos los artículos
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">

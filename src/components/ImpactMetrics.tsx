@@ -246,7 +246,7 @@ const MetricDetail = ({ metric, onClose }: { metric: Metric, onClose: () => void
           </ul>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-border-gray">
+        <div className="mt-6 pt-4">
           <p className="text-sm flex items-center gap-2">
             <span className="text-lime-neon">💡</span>
             <span className="text-text-secondary italic">{data.fact}</span>

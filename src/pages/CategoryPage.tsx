@@ -114,7 +114,7 @@ const CategoryPage: React.FC = () => {
     const categories = Array.from(new Set(blogPosts.map(post => post.category)));
 
     return (
-      <section className="py-10 bg-dark-panel border-t border-border-gray">
+      <section className="py-10 bg-dark-panel">
         <div className="container-main">
           <div className="flex flex-wrap justify-center gap-4">
             <motion.Link

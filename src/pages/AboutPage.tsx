@@ -22,7 +22,7 @@ const BiographySection: React.FC = () => {
                 alt="Ronald Rivero - Desarrollador Full Stack"
                 className="w-full aspect-[4/5] object-cover"
                 loading="eager"
-                fetchpriority="high"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent"></div>
             </motion.div>
@@ -105,7 +105,7 @@ const SkillsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-dark-panel border-y border-border-gray">
+    <section className="py-16 bg-dark-panel">
       <div className="container-main">
         <motion.h2
           className="font-gilroy font-medium text-3xl md:text-4xl text-text-primary mb-12 text-center"

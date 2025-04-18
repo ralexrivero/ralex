@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle }) => {
   return (
-    <div className="py-20 bg-dark-panel border-b border-border-gray mb-16">
+    <div className="py-20 bg-dark-panel mb-16">
       <div className="container-main">
         <motion.h1
           className="font-gilroy font-medium text-5xl md:text-6xl text-text-primary mb-6"
