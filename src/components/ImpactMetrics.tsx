@@ -203,7 +203,7 @@ const TrustStrip = () => {
 const ImpactMetrics = () => {
   return (
     <section
-      className="py-12 md:py-20 bg-background border-t border-border-gray"
+      className="py-12 md:py-20 bg-background"
       aria-label="Impact metrics section"
     >
       <div className="container-main">

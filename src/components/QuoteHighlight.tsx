@@ -8,7 +8,7 @@ const QuoteHighlight = () => {
   return (
     <section
       ref={ref}
-      className="py-24 md:py-32 bg-dark-panel border-y border-border-gray overflow-hidden relative"
+      className="py-24 md:py-32 bg-dark-panel overflow-hidden relative"
       aria-label="Quote highlight section"
     >
       {/* Círculos decorativos */}

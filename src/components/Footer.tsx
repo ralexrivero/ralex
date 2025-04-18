@@ -59,7 +59,7 @@ const renderSocialIcon = (item: any) => {
 
 const Footer = () => {
   return (
-    <footer className="bg-dark-panel border-t border-border-gray pt-16 pb-8">
+    <footer className="bg-dark-panel pt-16 pb-8">
       <div className="container-main">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
           {/* Logo y descripción */}

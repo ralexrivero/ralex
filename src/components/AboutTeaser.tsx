@@ -8,7 +8,7 @@ const AboutTeaser = () => {
   return (
     <section
       ref={ref}
-      className="py-16 md:py-24 bg-dark-panel border-y border-border-gray"
+      className="py-16 md:py-24 bg-dark-panel"
       aria-label="About teaser section"
     >
       <div className="container-main">
