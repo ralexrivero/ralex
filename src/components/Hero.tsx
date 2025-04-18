@@ -43,10 +43,24 @@ const Hero = () => {
     }),
   };
 
+  // Función para hacer scroll hacia ImpactMetrics cuando se hace clic en la flecha
+  const scrollToNextSection = () => {
+    const impactMetricsSection = document.getElementById('impact-metrics');
+    if (impactMetricsSection) {
+      // Llamar a la función showNextMetric de ImpactMetrics si está disponible
+      if (typeof window.showNextImpactMetric === 'function') {
+        window.showNextImpactMetric();
+      } else {
+        // Si no está disponible, hacer scroll normal
+        impactMetricsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[80vh] md:min-h-screen bg-background flex items-center py-24 md:py-[96px] overflow-hidden"
+      className="relative h-screen pt-24 bg-background flex items-center py-24 md:py-[96px] overflow-hidden"
       aria-label="Hero section"
     >
       <div className="container-main grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
@@ -118,18 +132,25 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll cue animado con posición correcta */}
+      {/* Scroll cue animado con posición correcta y funcionalidad */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-10"
         animate={{
           y: [0, 10, 0],
-          opacity: [0.8, 1, 0.8],
+          opacity: [0.6, 1, 0.6],
+          scale: [1, 1.15, 1]
         }}
         transition={{
           duration: 2,
+          ease: "easeInOut",
+          times: [0, 0.5, 1],
           repeat: Infinity,
           repeatType: "loop"
         }}
+        whileHover={{ scale: 1.2, opacity: 1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={scrollToNextSection}
+        aria-label="Scroll para explorar contenido"
       >
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 4V20M12 20L6 14M12 20L18 14" stroke="#C7FF6B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
