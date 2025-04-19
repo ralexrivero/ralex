@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsVisible(true);
@@ -71,9 +73,8 @@ const Hero = () => {
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             variants={staggerVariants}
-          >
-            Código abierto.<br/>Impacto real.
-          </motion.h1>
+            dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+          />
 
           <motion.p
             className="font-standerd text-text-secondary text-xl md:text-[1.25rem] leading-relaxed mb-8 max-w-2xl"
@@ -82,7 +83,7 @@ const Hero = () => {
             animate={isVisible ? "visible" : "hidden"}
             variants={staggerVariants}
           >
-            desarrollador full‑stack que convierte retos complejos en software libre, y comparte cada línea de aprendizaje.
+            {t('hero.subtitle')}
           </motion.p>
 
           <div className="flex flex-wrap gap-4">
@@ -93,9 +94,9 @@ const Hero = () => {
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
               variants={staggerVariants}
-              aria-label="Reserva una llamada de 15 minutos"
+              aria-label={t('hero.callButton')}
             >
-              Reserva una llamada de 15 min
+              {t('hero.callButton')}
             </motion.a>
 
             <motion.a
@@ -105,9 +106,9 @@ const Hero = () => {
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
               variants={staggerVariants}
-              aria-label="Explora mis proyectos"
+              aria-label={t('hero.exploreButton')}
             >
-              Explora mis proyectos
+              {t('hero.exploreButton')}
             </motion.a>
           </div>
         </div>

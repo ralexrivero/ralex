@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../context/LanguageContext";
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -8,6 +10,9 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ onClose, navItems }) => {
+  const { t } = useTranslation();
+  const { language } = useLanguage();
+
   // Referencia para enfocar el botón de cierre cuando se abre el menú
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -155,7 +160,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose, navItems }) => {
               ralexrivero@gmail.com
             </a>
             <p className="text-text-secondary text-sm">
-              © {new Date().getFullYear()} Ralex. Todos los derechos reservados.
+              {t('footer.copyright', { year: new Date().getFullYear() })}
             </p>
           </div>
         </motion.div>
