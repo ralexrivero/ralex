@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -14,17 +15,19 @@ export default {
     },
     extend: {
       colors: {
-        'background': '#0E0E0F',
-        'dark-panel': '#1A1A1B',
-        'lime-neon': '#C7FF6B',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        'text-primary': 'hsl(var(--text-primary))',
+        'text-secondary': 'hsl(var(--text-secondary))',
+        'dark-panel': 'hsl(var(--dark-panel))',
+        'border-gray': 'hsl(var(--border-gray))',
+        'lime-neon': 'hsl(var(--lime-neon))',
         'ralex-blue': '#87CEFA',
         'ralex-orange': '#FFA500',
-        'text-primary': '#FFFFFF',
-        'text-secondary': '#BFBFBF',
-        'border-gray': '#262626',
       },
       fontFamily: {
-        'gilroy': ['Space Grotesk', 'Inter', 'Arial', 'sans-serif'],
+        gilroy: ['Gilroy', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
         'standerd': ['DM Sans', 'system-ui', 'sans-serif'],
       },
       fontSize: {

@@ -92,7 +92,7 @@ const Footer = () => {
 
           {/* Enlaces de navegación */}
           <div className="col-span-1 md:col-span-4">
-            <h4 className="font-gilroy font-bold text-lg text-white mb-4">Navegación</h4>
+            <h4 className="font-gilroy font-bold text-lg text-text-primary mb-4">Navegación</h4>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -109,7 +109,7 @@ const Footer = () => {
 
           {/* Contacto y newsletter */}
           <div className="col-span-1 md:col-span-4">
-            <h4 className="font-gilroy font-bold text-lg text-white mb-4">Contacto</h4>
+            <h4 className="font-gilroy font-bold text-lg text-text-primary mb-4">Contacto</h4>
             <p className="text-text-secondary mb-4">
               ¿Tienes un proyecto en mente? Contáctame para discutir cómo podemos colaborar.
             </p>
@@ -121,7 +121,7 @@ const Footer = () => {
             </a>
 
             <div className="mt-6">
-              <h4 className="font-gilroy font-bold text-lg text-white mb-4">Newsletter</h4>
+              <h4 className="font-gilroy font-bold text-lg text-text-primary mb-4">Newsletter</h4>
               <form className="flex gap-2">
                 <input
                   type="email"
