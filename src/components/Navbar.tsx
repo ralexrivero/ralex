@@ -48,7 +48,8 @@ const Navbar = () => {
           }`}
       >
         <nav className="container-main h-16 flex items-center justify-between">
-          <Link to="/" className="text-lg font-semibold font-gilroy text-text-primary">
+          <Link to="/" className="flex items-center gap-2 text-lg font-semibold font-gilroy text-text-primary">
+            <img src="/logo.svg" alt="Ralex Logo" className="w-6 h-6" />
             Ralex.
           </Link>
 
