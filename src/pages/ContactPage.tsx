@@ -3,69 +3,153 @@ import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
 import ContactCTA from '../components/ContactCTA';
 
+// Componente decorativo de blob
+const Blob: React.FC<{ className?: string }> = ({ className = "" }) => (
+  <div className={`absolute opacity-20 blur-3xl pointer-events-none ${className}`}>
+    <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(300,300)">
+        <path d="M120,-157.6C152.7,-141.5,174.3,-102.6,194.8,-58.8C215.3,-14.9,234.6,33.8,228.4,80.8C222.2,127.8,190.4,173,148.1,184C105.8,195,52.9,171.8,-5.4,178.5C-63.8,185.2,-127.5,221.7,-168.3,210.8C-209.1,199.9,-227,141.5,-240.9,84.3C-254.8,27.1,-264.8,-29,-247.2,-72.9C-229.6,-116.8,-184.3,-148.6,-138.7,-163.5C-93.2,-178.4,-47.4,-176.4,-3.2,-171.8C40.9,-167.2,81.8,-160,120,-157.6Z"
+          fill="#81B622"/>
+      </g>
+    </svg>
+  </div>
+);
+
+// Componente para píxeles flotantes
+const FloatingPixels: React.FC = () => {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {[...Array(20)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 rounded-full bg-lime-neon/40"
+          initial={{
+            x: Math.random() * 100 + "%",
+            y: Math.random() * 100 + "%",
+            opacity: Math.random() * 0.5 + 0.3
+          }}
+          animate={{
+            y: [null, Math.random() * -50, null],
+            opacity: [null, Math.random() * 0.2 + 0.1, null]
+          }}
+          transition={{
+            duration: Math.random() * 5 + 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{
+            width: `${Math.random() * 4 + 2}px`,
+            height: `${Math.random() * 4 + 2}px`,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
 // Componente para formulario de contacto
 const ContactForm: React.FC = () => {
+  const inputClasses = "w-full px-5 py-4 bg-background/20 border border-[#333] rounded-md focus:outline-none focus:ring-1 focus:ring-lime-neon/50 focus:border-[#444] transition-all duration-300 backdrop-blur-sm";
+
   return (
-    <section className="py-16 bg-background">
-      <div className="container-main">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section className="py-20 bg-background relative overflow-hidden">
+      <Blob className="top-0 right-0 opacity-10 -translate-y-1/2 translate-x-1/4" />
+      <Blob className="bottom-0 left-0 opacity-10 translate-y-1/3 -translate-x-1/3" />
+      <FloatingPixels />
+
+      <div className="container-main relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            className="lg:col-span-5 space-y-8"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <h2 className="font-gilroy font-medium text-3xl md:text-4xl text-text-primary">
-              ¿Hablamos sobre tu proyecto?
-            </h2>
+            <motion.div
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h2 className="font-gilroy font-medium text-4xl md:text-5xl text-text-primary leading-tight">
+                ¿Hablamos sobre <span className="text-lime-neon">tu proyecto</span>?
+              </h2>
 
-            <p className="text-text-secondary">
-              Tanto si tienes un proyecto concreto en mente como si solo quieres consultarme algo técnico o discutir posibilidades de colaboración, estaré encantado de charlar contigo. Siéntete libre de completar el formulario o contactarme directamente.
-            </p>
+              <p className="text-text-secondary text-lg">
+                Tanto si tienes un proyecto concreto en mente como si solo quieres consultarme algo técnico o discutir posibilidades de colaboración, estaré encantado de charlar contigo.
+              </p>
+            </motion.div>
 
-            <div className="space-y-4 mt-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-dark-panel rounded-lg text-lime-neon flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="space-y-6 pt-4">
+              <motion.div
+                className="flex items-start gap-5 p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <div className="p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-gilroy font-medium text-xl text-text-primary">Email</h3>
-                  <a href="mailto:ralexrivero@gmail.com" className="text-lime-neon hover:underline">ralexrivero@gmail.com</a>
+                  <h3 className="font-gilroy font-medium text-xl text-text-primary mb-1">Email</h3>
+                  <a
+                    href="mailto:ralexrivero@gmail.com"
+                    className="text-lime-neon hover:underline relative inline-block group"
+                  >
+                    ralexrivero@gmail.com
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-neon group-hover:w-full transition-all duration-300"></span>
+                  </a>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-dark-panel rounded-lg text-lime-neon flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <motion.div
+                className="flex items-start gap-5 p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <div className="p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-gilroy font-medium text-xl text-text-primary">Video llamada</h3>
+                  <h3 className="font-gilroy font-medium text-xl text-text-primary mb-1">Video llamada</h3>
                   <p className="text-text-secondary">Agenda una llamada de 30 minutos para discutir tu proyecto.</p>
-                  <a href="https://calendly.com/ralexrivero" target="_blank" rel="noopener noreferrer" className="text-lime-neon hover:underline inline-block mt-1">
+                  <a
+                    href="https://calendly.com/ralexrivero"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lime-neon hover:underline inline-block mt-2 group relative"
+                  >
                     Reservar una fecha
+                    <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform duration-300">→</span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-neon group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-dark-panel rounded-lg text-lime-neon flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <motion.div
+                className="flex items-start gap-5 p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <div className="p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-gilroy font-medium text-xl text-text-primary">Redes sociales</h3>
-                  <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
+                  <h3 className="font-gilroy font-medium text-xl text-text-primary mb-1">Redes sociales</h3>
+                  <div className="flex flex-wrap gap-3 mt-3">
                     <a
                       href="https://github.com/ralexrivero"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-[#24292E] hover:bg-[#2c3135] transition-colors rounded-lg w-fit text-white"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#2c3135] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -79,7 +163,7 @@ const ContactForm: React.FC = () => {
                       href="https://www.linkedin.com/in/ronald-rivero/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-[#0A66C2] hover:bg-[#004182] transition-colors rounded-lg w-fit text-white"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#004182] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -93,7 +177,7 @@ const ContactForm: React.FC = () => {
                       href="https://twitter.com/ralex_uy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-[#1DA1F2] hover:bg-[#1a94df] transition-colors rounded-lg w-fit text-white"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#1a94df] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -102,75 +186,104 @@ const ContactForm: React.FC = () => {
                       </span>
                       Twitter
                     </a>
+
+                    <a
+                      href="https://orcid.org/0009-0000-6824-5934"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#A6CE39] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
+                    >
+                      <span className="mr-2">
+                        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                          <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.038 0 4.963 1.719 4.963 5.044 0 3.306-1.925 5.109-4.972 5.109h-3.891V7.416zm1.444 1.303v7.547h2.297c2.319 0 3.694-1.303 3.694-3.787 0-2.456-1.375-3.76-3.76-3.76h-2.307z"/>
+                        </svg>
+                      </span>
+                      ORCID
+                    </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
           <motion.div
-            className="bg-dark-panel border border-border-gray rounded-xl p-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            className="lg:col-span-7"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <form className="space-y-6">
-              <div className="space-y-4">
-                <label htmlFor="name" className="block text-text-primary font-medium">Nombre</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 bg-background border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-neon focus:border-transparent"
-                  placeholder="Tu nombre"
-                  required
-                />
-              </div>
+            <motion.div
+              className="bg-dark-panel/60 backdrop-blur-md border border-[#333] rounded-2xl p-8 md:p-10 shadow-2xl shadow-black/10 relative overflow-hidden group"
+              whileHover={{ boxShadow: "0 25px 50px -12px rgba(129, 182, 34, 0.08)" }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-neon/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-              <div className="space-y-4">
-                <label htmlFor="email" className="block text-text-primary font-medium">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 bg-background border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-neon focus:border-transparent"
-                  placeholder="tu.email@ejemplo.com"
-                  required
-                />
-              </div>
+              <form className="space-y-6 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="block text-text-primary font-medium text-lg">Nombre</label>
+                    <input
+                      type="text"
+                      id="name"
+                      className={inputClasses}
+                      placeholder="Tu nombre"
+                      required
+                    />
+                  </div>
 
-              <div className="space-y-4">
-                <label htmlFor="subject" className="block text-text-primary font-medium">Asunto</label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 bg-background border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-neon focus:border-transparent"
-                  placeholder="¿De qué se trata?"
-                  required
-                />
-              </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-text-primary font-medium text-lg">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      className={inputClasses}
+                      placeholder="tu.email@ejemplo.com"
+                      required
+                    />
+                  </div>
+                </div>
 
-              <div className="space-y-4">
-                <label htmlFor="message" className="block text-text-primary font-medium">Mensaje</label>
-                <textarea
-                  id="message"
-                  rows={6}
-                  className="w-full px-4 py-3 bg-background border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-neon focus:border-transparent resize-none"
-                  placeholder="Cuéntame los detalles de tu proyecto..."
-                  required
-                ></textarea>
-              </div>
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="block text-text-primary font-medium text-lg">Asunto</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    className={inputClasses}
+                    placeholder="¿De qué se trata?"
+                    required
+                  />
+                </div>
 
-              <button
-                type="submit"
-                className="btn-primary w-full py-3 px-6 text-center"
-              >
-                Enviar mensaje
-              </button>
+                <div className="space-y-2">
+                  <label htmlFor="message" className="block text-text-primary font-medium text-lg">Mensaje</label>
+                  <textarea
+                    id="message"
+                    rows={6}
+                    className={`${inputClasses} resize-none rounded-lg`}
+                    placeholder="Cuéntame los detalles de tu proyecto..."
+                    required
+                  ></textarea>
+                </div>
 
-              <p className="text-text-secondary text-sm text-center">
-                Generalmente respondo dentro de las 24 horas hábiles.
-              </p>
-            </form>
+                <motion.button
+                  type="submit"
+                  className="w-full py-3 px-6 bg-white text-black font-normal text-[16px] rounded-full border border-[#333]/10 transition-all duration-300 relative overflow-hidden shadow-sm flex items-center justify-between cursor-pointer group"
+                  whileHover={{ scale: 1.005 }}
+                  whileTap={{ scale: 0.995 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span>Enviar mensaje</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+                    <path fill="currentColor" d="M5 17.59L15.59 7H9V5h10v10h-2V8.41L6.41 19L5 17.59z"/>
+                  </svg>
+                </motion.button>
+
+                <p className="text-text-secondary text-sm text-center pt-2">
+                  Generalmente respondo dentro de las 24 horas hábiles.
+                </p>
+              </form>
+            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -181,10 +294,12 @@ const ContactForm: React.FC = () => {
 // Componente para mapa de ubicación
 const LocationMap: React.FC = () => {
   return (
-    <section className="py-16 bg-dark-panel">
-      <div className="container-main">
+    <section className="py-16 bg-dark-panel relative overflow-hidden">
+      <Blob className="top-0 left-1/2 opacity-5 -translate-x-1/2 -translate-y-1/2" />
+
+      <div className="container-main relative z-10">
         <motion.div
-          className="text-center mb-10"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -199,12 +314,14 @@ const LocationMap: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="rounded-xl overflow-hidden h-[400px] border border-border-gray"
+          className="rounded-2xl overflow-hidden h-[450px] border border-border-gray shadow-2xl shadow-black/20 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          whileHover={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.3)" }}
         >
+          <div className="absolute inset-0 bg-gradient-to-b from-lime-neon/10 to-transparent opacity-50 z-10 pointer-events-none"></div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209703.84072855587!2d-56.3543299459402!3d-34.83381853593409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses-419!2sus!4v1655331518100!5m2!1ses-419!2sus"
             width="100%"
@@ -214,6 +331,7 @@ const LocationMap: React.FC = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Google Maps - Montevideo, Uruguay"
+            className="relative z-0"
           ></iframe>
         </motion.div>
       </div>
