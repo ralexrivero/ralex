@@ -63,7 +63,7 @@ const Navbar = () => {
             <button
               onClick={toggleTheme}
               aria-label={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
-              className="p-2 rounded-full text-text-secondary hover:text-text-primary hover:bg-dark-panel/40 transition-colors duration-200"
+              className="p-2 rounded-full text-text-secondary hover:text-text-primary hover:bg-dark-panel/40 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
             >
               {theme === 'light' ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -81,7 +81,7 @@ const Navbar = () => {
             <button
               onClick={toggleTheme}
               aria-label={`Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`}
-              className="p-2 mr-2 rounded-full text-text-secondary hover:text-text-primary hover:bg-dark-panel/40 transition-colors duration-200"
+              className="p-2 mr-2 rounded-full text-text-secondary hover:text-text-primary hover:bg-dark-panel/40 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
             >
               {theme === 'light' ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

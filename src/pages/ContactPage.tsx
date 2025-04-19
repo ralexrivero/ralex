@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
                       href="https://github.com/ralexrivero"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#2c3135] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#2c3135] dark:hover:bg-[#2c3135] hover:bg-opacity-80 transition-all duration-300 rounded-xl text-text-primary shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -127,7 +127,7 @@ const ContactForm: React.FC = () => {
                       href="https://www.linkedin.com/in/ronald-rivero/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#004182] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#0077B5]/20 dark:hover:bg-[#004182] hover:text-[#0077B5] dark:hover:text-white transition-all duration-300 rounded-xl text-text-primary shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -141,7 +141,7 @@ const ContactForm: React.FC = () => {
                       href="https://twitter.com/ralex_uy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#1a94df] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#1DA1F2]/20 dark:hover:bg-[#1a94df] hover:text-[#1DA1F2] dark:hover:text-white transition-all duration-300 rounded-xl text-text-primary shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -155,7 +155,7 @@ const ContactForm: React.FC = () => {
                       href="https://orcid.org/0009-0000-6824-5934"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#A6CE39] transition-all duration-300 rounded-xl text-white shadow-lg shadow-black/20 hover:scale-105"
+                      className="flex items-center py-2 px-4 bg-dark-panel hover:bg-[#A6CE39]/20 dark:hover:bg-[#A6CE39] hover:text-[#A6CE39] dark:hover:text-white transition-all duration-300 rounded-xl text-text-primary shadow-lg shadow-black/20 hover:scale-105"
                     >
                       <span className="mr-2">
                         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
