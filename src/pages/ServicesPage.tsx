@@ -18,8 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, deliverab
     <motion.div
       className="bg-dark-panel border border-border-gray rounded-xl overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="p-8">

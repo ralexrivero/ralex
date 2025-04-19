@@ -150,8 +150,7 @@ const BlogCard: React.FC<{ post: BlogPost; index: number }> = ({ post, index }) 
     <motion.div
       className="bg-dark-panel border border-border-gray rounded-2xl overflow-hidden h-full"
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
       <a
@@ -209,8 +208,7 @@ const FeaturedPost: React.FC<{ post: BlogPost; index: number }> = ({ post, index
     <motion.div
       className="bg-dark-panel border border-border-gray rounded-2xl overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
     >
       <div className="grid md:grid-cols-2 gap-0">
@@ -289,8 +287,7 @@ const FeaturedPosts: React.FC = () => {
         <motion.h2
           className="font-gilroy font-medium text-3xl md:text-4xl text-text-primary mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Artículos destacados
@@ -323,8 +320,7 @@ const BlogCategories: React.FC = () => {
             href="/blog"
             className="px-4 py-2 rounded-full bg-lime-neon text-background font-medium"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
             Todos
@@ -336,8 +332,7 @@ const BlogCategories: React.FC = () => {
               href={`/blog/categoria/${category.toLowerCase()}`}
               className="px-4 py-2 rounded-full bg-background border border-border-gray text-text-secondary hover:border-lime-neon transition-colors"
               initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1 * (index + 1) }}
             >
               {category}
@@ -357,8 +352,7 @@ const BlogGrid: React.FC = () => {
         <motion.h2
           className="font-gilroy font-medium text-3xl md:text-4xl text-text-primary mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Todos los artículos
@@ -386,8 +380,7 @@ const NewsletterSection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <h2 className="font-gilroy font-medium text-3xl md:text-4xl text-text-primary mb-4">
@@ -401,8 +394,7 @@ const NewsletterSection: React.FC = () => {
           <motion.form
             className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <input
@@ -422,8 +414,7 @@ const NewsletterSection: React.FC = () => {
           <motion.p
             className="text-text-secondary text-sm mt-4"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             Te enviaré contenido técnico relevante. Puedes cancelar tu suscripción en cualquier momento.
