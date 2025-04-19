@@ -15,52 +15,16 @@ const Blob: React.FC<{ className?: string }> = ({ className = "" }) => (
   </div>
 );
 
-// Componente para píxeles flotantes
-const FloatingPixels: React.FC = () => {
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 rounded-full bg-lime-neon/40"
-          initial={{
-            x: Math.random() * 100 + "%",
-            y: Math.random() * 100 + "%",
-            opacity: Math.random() * 0.5 + 0.3
-          }}
-          animate={{
-            y: [null, Math.random() * -50, null],
-            opacity: [null, Math.random() * 0.2 + 0.1, null]
-          }}
-          transition={{
-            duration: Math.random() * 5 + 5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            width: `${Math.random() * 4 + 2}px`,
-            height: `${Math.random() * 4 + 2}px`,
-          }}
-        />
-      ))}
-    </div>
-  );
-};
-
 // Componente para formulario de contacto
 const ContactForm: React.FC = () => {
   const inputClasses = "w-full px-5 py-4 bg-background/20 border border-[#333] rounded-md focus:outline-none focus:ring-1 focus:ring-lime-neon/50 focus:border-[#444] transition-all duration-300 backdrop-blur-sm";
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
-      <Blob className="top-0 right-0 opacity-10 -translate-y-1/2 translate-x-1/4" />
-      <Blob className="bottom-0 left-0 opacity-10 translate-y-1/3 -translate-x-1/3" />
-      <FloatingPixels />
-
+    <section className="py-12 md:py-20 bg-transparent">
       <div className="container-main relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <motion.div
-            className="lg:col-span-5 space-y-8"
+            className="lg:col-span-5 space-y-6 lg:space-y-8"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -80,23 +44,23 @@ const ContactForm: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="space-y-6 pt-4">
+            <div className="space-y-4 lg:space-y-6 pt-2 lg:pt-4">
               <motion.div
-                className="flex items-start gap-5 p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
+                className="flex items-start gap-4 lg:gap-5 p-4 lg:p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <div className="p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="p-3 lg:p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 lg:h-7 lg:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-gilroy font-medium text-xl text-text-primary mb-1">Email</h3>
+                  <h3 className="font-gilroy font-medium text-lg lg:text-xl text-text-primary mb-1">Email</h3>
                   <a
                     href="mailto:ralexrivero@gmail.com"
-                    className="text-lime-neon hover:underline relative inline-block group"
+                    className="text-lime-neon hover:underline relative inline-block group text-sm lg:text-base"
                   >
                     ralexrivero@gmail.com
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-neon group-hover:w-full transition-all duration-300"></span>
@@ -105,34 +69,34 @@ const ContactForm: React.FC = () => {
               </motion.div>
 
               <motion.div
-                className="flex items-start gap-5 p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
+                className="flex items-start gap-4 lg:gap-5 p-4 lg:p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="p-3 lg:p-4 bg-dark-panel rounded-xl text-lime-neon flex-shrink-0 shadow-lg shadow-lime-neon/5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 lg:h-7 lg:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-gilroy font-medium text-xl text-text-primary mb-1">Video llamada</h3>
-                  <p className="text-text-secondary">Agenda una llamada de 30 minutos para discutir tu proyecto.</p>
+                  <h3 className="font-gilroy font-medium text-lg lg:text-xl text-text-primary mb-1">Video llamada</h3>
+                  <p className="text-text-secondary text-sm lg:text-base">Agenda una llamada de 30 minutos para discutir tu proyecto.</p>
                   <a
                     href="https://calendly.com/ralexrivero"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lime-neon hover:underline inline-block mt-2 group relative"
+                    className="text-lime-neon hover:underline inline-block mt-1 lg:mt-2 group relative text-sm lg:text-base"
                   >
                     Reservar una fecha
-                    <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform duration-300">→</span>
+                    <span className="ml-1 lg:ml-2 group-hover:translate-x-1 inline-block transition-transform duration-300">→</span>
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-lime-neon group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </div>
               </motion.div>
 
               <motion.div
-                className="flex items-start gap-5 p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
+                className="flex items-start gap-4 lg:gap-5 p-4 lg:p-5 rounded-xl hover:bg-dark-panel/40 transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
@@ -213,55 +177,55 @@ const ContactForm: React.FC = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <motion.div
-              className="bg-dark-panel/60 backdrop-blur-md border border-[#333] rounded-2xl p-8 md:p-10 shadow-2xl shadow-black/10 relative overflow-hidden group"
+              className="bg-dark-panel/60 backdrop-blur-md border border-[#333] rounded-2xl p-4 md:p-8 shadow-2xl shadow-black/10 relative group"
               whileHover={{ boxShadow: "0 25px 50px -12px rgba(129, 182, 34, 0.08)" }}
               transition={{ duration: 0.3 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-lime-neon/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-neon/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
               <form className="space-y-6 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-text-primary font-medium text-lg">Nombre</label>
+                    <label htmlFor="name" className="hidden md:block text-text-primary font-medium text-lg">Nombre</label>
                     <input
                       type="text"
                       id="name"
                       className={inputClasses}
-                      placeholder="Tu nombre"
+                      placeholder="Nombre"
                       required
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-text-primary font-medium text-lg">Email</label>
+                    <label htmlFor="email" className="hidden md:block text-text-primary font-medium text-lg">Email</label>
                     <input
                       type="email"
                       id="email"
                       className={inputClasses}
-                      placeholder="tu.email@ejemplo.com"
+                      placeholder="Email"
                       required
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="block text-text-primary font-medium text-lg">Asunto</label>
+                  <label htmlFor="subject" className="hidden md:block text-text-primary font-medium text-lg">Asunto</label>
                   <input
                     type="text"
                     id="subject"
                     className={inputClasses}
-                    placeholder="¿De qué se trata?"
+                    placeholder="Asunto"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="block text-text-primary font-medium text-lg">Mensaje</label>
+                  <label htmlFor="message" className="hidden md:block text-text-primary font-medium text-lg">Mensaje</label>
                   <textarea
                     id="message"
                     rows={6}
                     className={`${inputClasses} resize-none rounded-lg`}
-                    placeholder="Cuéntame los detalles de tu proyecto..."
+                    placeholder="Mensaje"
                     required
                   ></textarea>
                 </div>
@@ -294,9 +258,7 @@ const ContactForm: React.FC = () => {
 // Componente para mapa de ubicación
 const LocationMap: React.FC = () => {
   return (
-    <section className="py-16 bg-dark-panel relative overflow-hidden">
-      <Blob className="top-0 left-1/2 opacity-5 -translate-x-1/2 -translate-y-1/2" />
-
+    <section className="py-16 bg-transparent">
       <div className="container-main relative z-10">
         <motion.div
           className="text-center mb-12"
@@ -342,19 +304,26 @@ const LocationMap: React.FC = () => {
 // Página completa
 const ContactPage: React.FC = () => {
   return (
-    <>
-      <PageHeader
-        title="Contacto"
-        subtitle="¿Tienes un proyecto en mente o una consulta técnica? Estoy aquí para ayudarte a materializarlo"
-      />
-      <ContactForm />
-      <LocationMap />
-      <ContactCTA
-        title="Trabajemos juntos"
-        subtitle="El primer paso para crear algo increíble es simplemente comenzar una conversación. ¿Qué te gustaría construir?"
-        buttonText="Agendar una llamada"
-      />
-    </>
+    <div className="relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <Blob className="lg:top-1/2 lg:right-[-30%] lg:-translate-y-1/2 lg:scale-[1.8] lg:opacity-15 top-1/2 right-[-40%] -translate-y-1/2 scale-[1.5] opacity-10" />
+        <Blob className="top-[-10%] left-[-20%] scale-125 opacity-10" />
+      </div>
+
+      <div className="relative z-10">
+        <PageHeader
+          title="Contacto"
+          subtitle="¿Tienes un proyecto en mente o una consulta técnica? Estoy aquí para ayudarte a materializarlo"
+        />
+        <ContactForm />
+        <LocationMap />
+        <ContactCTA
+          title="Trabajemos juntos"
+          subtitle="El primer paso para crear algo increíble es simplemente comenzar una conversación. ¿Qué te gustaría construir?"
+          buttonText="Agendar una llamada"
+        />
+      </div>
+    </div>
   );
 };
 
