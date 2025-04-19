@@ -306,7 +306,7 @@ const ContactPage: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <Blob className="lg:top-1/2 lg:right-[-30%] lg:-translate-y-1/2 lg:scale-[1.8] lg:opacity-15 top-1/2 right-[-40%] -translate-y-1/2 scale-[1.5] opacity-10" />
+        <Blob className="lg:top-1/2 lg:right-[-30%] lg:-translate-y-1/2 lg:scale-[1.8] lg:opacity-15 top-[85%] right-[-40%] -translate-y-1/2 scale-[1.5] opacity-10" />
         <Blob className="top-[-10%] left-[-20%] scale-125 opacity-10" />
       </div>
 
