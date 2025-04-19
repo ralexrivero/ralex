@@ -99,7 +99,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="#projects"
+              href="/projects"
               className="btn-secondary"
               custom={3}
               initial="hidden"
