@@ -5,6 +5,7 @@ import MobileMenu from './MobileMenu';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from 'react-i18next';
+import { useFeatures, Feature } from '../context/FeaturesContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,6 +14,7 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, changeLanguage } = useLanguage();
   const { t } = useTranslation();
+  const { isEnabled } = useFeatures();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,13 +57,13 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: t('navbar.home'), href: '/' },
-    { label: t('navbar.about'), href: '/about' },
-    { label: t('navbar.services'), href: '/services' },
-    { label: t('navbar.projects'), href: '/projects' },
-    { label: t('navbar.blog'), href: '/blog' },
-    { label: t('navbar.contact'), href: '/contact' },
-  ];
+    { label: t('navbar.home'), href: '/', feature: null },
+    { label: t('navbar.about'), href: '/about', feature: 'about' },
+    { label: t('navbar.services'), href: '/services', feature: 'services' },
+    { label: t('navbar.projects'), href: '/projects', feature: 'projects' },
+    { label: t('navbar.blog'), href: '/blog', feature: 'blog' },
+    { label: t('navbar.contact'), href: '/contact', feature: 'contact' },
+  ] as const;
 
   const navLinkClasses = ({ isActive }: { isActive: boolean }): string =>
     `relative text-sm font-medium transition-colors duration-200 hover:text-text-primary/80 ${isActive ? 'text-text-primary' : 'text-text-secondary'
@@ -82,12 +84,18 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-6">
-            <NavLink to="/" className={navLinkClasses} end>{t('navbar.home')}</NavLink>
-            <NavLink to="/about" className={navLinkClasses}>{t('navbar.about')}</NavLink>
-            <NavLink to="/services" className={navLinkClasses}>{t('navbar.services')}</NavLink>
-            <NavLink to="/projects" className={navLinkClasses}>{t('navbar.projects')}</NavLink>
-            <NavLink to="/blog" className={navLinkClasses}>{t('navbar.blog')}</NavLink>
-            <NavLink to="/contact" className={navLinkClasses}>{t('navbar.contact')}</NavLink>
+            {navItems.map((item) => (
+              item.feature === null || isEnabled(item.feature as Feature) ? (
+                <NavLink
+                  key={item.href}
+                  to={item.href}
+                  className={navLinkClasses}
+                  end={item.href === '/'}
+                >
+                  {item.label}
+                </NavLink>
+              ) : null
+            ))}
 
             {/* Selector de idioma mejorado */}
             <div className="language-selector relative">
@@ -261,7 +269,14 @@ const Navbar = () => {
       </header>
 
       <AnimatePresence>
-        {isMobileMenuOpen && <MobileMenu onClose={closeMobileMenu} navItems={navItems} />}
+        {isMobileMenuOpen && (
+          <MobileMenu
+            onClose={closeMobileMenu}
+            navItems={navItems.filter(item =>
+              item.feature === null || isEnabled(item.feature as Feature)
+            )}
+          />
+        )}
       </AnimatePresence>
     </>
   );

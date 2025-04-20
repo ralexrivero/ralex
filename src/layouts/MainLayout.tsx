@@ -1,10 +1,10 @@
 import { ReactNode, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 interface MainLayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
@@ -19,7 +19,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <div className="min-h-screen bg-background text-text-primary flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        {children}
+        {children || <Outlet />}
       </main>
       <Footer />
     </div>

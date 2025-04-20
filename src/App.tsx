@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import { FeaturesProvider } from './context/FeaturesContext';
+import { FeatureGuard } from './components/FeatureGuard';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage'; // Nueva página para el contenido actual
 import AboutPage from './pages/AboutPage'; // Página "Sobre mí"
@@ -11,23 +13,81 @@ import CategoryPage from './pages/CategoryPage';
 import ContactPage from './pages/ContactPage'; // Página "Contacto"
 import NotFoundPage from './pages/NotFoundPage';
 
-function App() {
+const App = () => {
   return (
-    <MainLayout>
+    <FeaturesProvider>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/projects/:id" element={<ProjectDetailPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogPostPage />} />
-        <Route path="/blog/categoria/:category" element={<CategoryPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="about"
+            element={
+              <FeatureGuard feature="about">
+                <AboutPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="services"
+            element={
+              <FeatureGuard feature="services">
+                <ServicesPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="projects"
+            element={
+              <FeatureGuard feature="projects">
+                <ProjectsPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="projects/:id"
+            element={
+              <FeatureGuard feature="projects">
+                <ProjectDetailPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="blog"
+            element={
+              <FeatureGuard feature="blog">
+                <BlogPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="blog/:slug"
+            element={
+              <FeatureGuard feature="blog">
+                <BlogPostPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="blog/categoria/:category"
+            element={
+              <FeatureGuard feature="blog">
+                <CategoryPage />
+              </FeatureGuard>
+            }
+          />
+          <Route
+            path="contact"
+            element={
+              <FeatureGuard feature="contact">
+                <ContactPage />
+              </FeatureGuard>
+            }
+          />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
       </Routes>
-    </MainLayout>
+    </FeaturesProvider>
   );
-}
+};
 
 export default App;
