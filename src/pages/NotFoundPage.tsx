@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Componente para animación de código en consola
 const ConsoleCode: React.FC = () => {
@@ -19,7 +20,7 @@ const ConsoleCode: React.FC = () => {
   useEffect(() => {
     let currentLineIndex = 0;
     let currentCharIndex = 0;
-    let timeout: NodeJS.Timeout;
+    let timeout: number;
 
     const typeText = () => {
       if (currentLineIndex < codeLines.length) {
@@ -176,6 +177,18 @@ const GlitchText: React.FC = () => {
 };
 
 const NotFoundPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let timeout: number;
+
+    timeout = setTimeout(() => {
+      navigate('/');
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, [navigate]);
+
   return (
     <div className="min-h-screen pt-32 pb-20 flex items-center relative">
       <FloatingPixels />

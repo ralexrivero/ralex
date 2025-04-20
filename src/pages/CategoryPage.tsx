@@ -117,33 +117,39 @@ const CategoryPage: React.FC = () => {
       <section className="py-10 bg-dark-panel">
         <div className="container-main">
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.Link
-              to="/blog"
-              className="px-4 py-2 rounded-full bg-background border border-border-gray text-text-secondary hover:border-lime-neon transition-colors"
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
             >
-              Todos
-            </motion.Link>
+              <Link
+                to="/blog"
+                className="px-4 py-2 rounded-full bg-background border border-border-gray text-text-secondary hover:border-lime-neon transition-colors"
+              >
+                Todos
+              </Link>
+            </motion.div>
 
             {categories.map((cat, index) => (
-              <motion.Link
+              <motion.div
                 key={cat}
-                to={`/blog/categoria/${cat.toLowerCase()}`}
-                className={`px-4 py-2 rounded-full ${
-                  cat.toLowerCase() === category
-                    ? 'bg-lime-neon text-background font-medium'
-                    : 'bg-background border border-border-gray text-text-secondary hover:border-lime-neon'
-                } transition-colors`}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.1 * (index + 1) }}
               >
-                {cat}
-              </motion.Link>
+                <Link
+                  to={`/blog/categoria/${cat.toLowerCase()}`}
+                  className={`px-4 py-2 rounded-full ${
+                    cat.toLowerCase() === category
+                      ? 'bg-lime-neon text-background font-medium'
+                      : 'bg-background border border-border-gray text-text-secondary hover:border-lime-neon'
+                  } transition-colors`}
+                >
+                  {cat}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>

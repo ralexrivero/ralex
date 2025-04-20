@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../context/LanguageContext";
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -11,7 +10,6 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ onClose, navItems }) => {
   const { t } = useTranslation();
-  const { language } = useLanguage();
 
   // Referencia para enfocar el botón de cierre cuando se abre el menú
   const closeButtonRef = useRef<HTMLButtonElement>(null);

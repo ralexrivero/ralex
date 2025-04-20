@@ -73,7 +73,7 @@ const Footer = () => {
               que impulsen el conocimiento compartido y la innovación tecnológica.
             </p>
             <div className="flex gap-4">
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <motion.a
                   key={link.name}
                   href={link.href}
