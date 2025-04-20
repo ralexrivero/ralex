@@ -153,26 +153,26 @@ const ExperienceSection: React.FC = () => {
     {
       period: "2020 - Presente",
       role: "Desarrollador Full Stack & Instructor de Cloud",
-      company: "Holberton School",
-      description: "Desarrollo de soluciones cloud-native y enseñanza de Python, C y AWS a estudiantes de ingeniería de software."
+      company: "Escuela de Tecnología",
+      description: "Desarrollo de soluciones cloud-native y formación en Python, C y AWS para futuros ingenieros de software."
     },
     {
       period: "2018 - 2020",
       role: "Data Engineer",
-      company: "AFAP",
+      company: "Sector Financiero",
       description: "Implementación de pipelines ETL para análisis financiero y automatización de reportes regulatorios."
     },
     {
       period: "2015 - 2018",
       role: "Desarrollador Backend",
-      company: "Itaú",
-      description: "Desarrollo de APIs y microservicios para plataformas de banca digital."
+      company: "Banca Digital",
+      description: "Desarrollo de APIs y microservicios para plataformas de servicios financieros digitales."
     },
     {
       period: "2010 - 2015",
       role: "Consultor de Calidad",
-      company: "Ceibal",
-      description: "Optimización de procesos y gestión de calidad para programa nacional de inclusión digital."
+      company: "Sector Educativo",
+      description: "Optimización de procesos y gestión de calidad para programas de inclusión digital educativa."
     }
   ];
 
