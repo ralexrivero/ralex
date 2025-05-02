@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: ralex-works
+    ports:
+      - "80:80"
     networks:
       - web
     restart: unless-stopped

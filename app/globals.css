@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Tema Claro */
+    --background: 0 0% 100%; /* Blanco */
+    --foreground: 240 10% 3.9%; /* Casi Negro */
+    --text-primary: 240 10% 10%; /* Texto Principal Oscuro */
+    --text-secondary: 240 5% 35%; /* Texto Secundario Grisáceo */
+    --dark-panel: 0 0% 96%; /* Panel Gris Muy Claro */
+    --border-gray: 0 0% 88%; /* Borde Gris Claro */
+    --lime-neon: 84 100% 59%; /* Verde Neón en formato HSL */
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --primary: 84 100% 59%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Tema Oscuro (Basado en el diseño actual) */
+    --background: 240 10% 3.9%; /* Casi Negro / Azul muy oscuro */
+    --foreground: 0 0% 98%; /* Casi Blanco */
+    --text-primary: 0 0% 95%; /* Texto Principal Claro */
+    --text-secondary: 0 0% 65%; /* Texto Secundario Grisáceo Claro */
+    --dark-panel: 240 4% 12%; /* Panel Gris Oscuro */
+    --border-gray: 0 0% 20%; /* Borde Gris Oscuro */
+    --lime-neon: 84 100% 59%; /* Verde Neón en formato HSL */
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --primary: 84 100% 59%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  html {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--text-primary));
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", "Inter", "Arial", sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-main {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-main {
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
+    }
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid hsl(var(--lime-neon));
+    color: hsl(var(--text-primary));
+  }
+
+  .btn-primary:hover {
+    background-color: hsl(var(--lime-neon));
+    color: hsl(var(--background));
+    transform: scale(1.04);
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  .btn-primary:focus {
+    outline-offset: 2px;
+  }
+
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid hsl(var(--border-gray));
+    color: hsl(var(--text-primary));
+  }
+
+  .btn-secondary:hover {
+    border-color: hsl(var(--lime-neon));
+    color: hsl(var(--lime-neon));
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  .btn-secondary:focus {
+    outline-offset: 2px;
+  }
+
+  .navbar-item {
+    text-transform: uppercase;
+    font-family: "Space Grotesk", "Inter", "Arial", sans-serif;
+    font-weight: 500;
+    color: hsl(var(--text-primary));
+  }
+
+  .navbar-item:hover {
+    color: hsl(var(--lime-neon));
+    transition-property: color;
+  }
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-ralex-blue to-ralex-orange bg-clip-text text-transparent;
+}
+
+.section-container {
+  @apply container mx-auto px-4 py-16 md:py-24;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
